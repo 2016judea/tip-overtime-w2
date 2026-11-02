@@ -96,6 +96,44 @@ Employee 1—n Shift, Employee 1—n Payment (server), Order 1—n ServiceCharge
 Employee 1—n OtherRemuneration, Shift/Remuneration → Workweek (employee, week_start),
 Employee → TTOC. Output = Employee × {TP, TT, TTOC} with each figure's rows.
 
-## Reality check against Clover
+## Reality check against Clover (2026-11-02)
 
-(filled in below, after reading the API)
+Checked field by field against Clover's v3 REST docs and against what the sandbox merchant
+`4ZNNY5AK5SNT1` actually returned (`scripts/sandbox.js get …`). Permissions: Employees, Payments,
+Orders and Merchant, all read-only.
+
+| Model field | Clover | How the product handles it |
+|---|---|---|
+| Business name, timezone | ✅ `GET /merchants/{m}` name; `/properties` → `timezone` | read |
+| legal_name, EIN | ❌ not needed for the figures | not asked (the W-2 preparer has them) |
+| **workweek_start** | ❌ Clover has no payroll workweek | **asked**, default Sunday 00:00 local, shown as "to confirm" |
+| state daily-OT rule | ❌ | not needed: TT is FLSA-only (FAQ Q16); only explains a bigger paid figure |
+| Employee id, name | ✅ `/employees` (+ any id seen on a shift or payment, fetched one by one, so a deleted mid-year employee still gets a line) | read |
+| role / job title | ⚠️ partial: system role (OWNER/ADMIN/MANAGER/EMPLOYEE), custom role names via `expand=roles`, `nickname`, `customId` | read, used only to **suggest** a TTOC |
+| **flsa_status** (exempt) | ❌ | **asked**, default hourly non-exempt, flagged until confirmed |
+| **pay_type, base rate(s), rate changes** | ❌ no wage field on the employee object | **asked** per employee, with dated rate changes. Until a rate is entered TT is $0 and the person is flagged. |
+| **per-job rates** | ❌ shifts carry no job | not fillable: one rate per period per employee; a blended rate across jobs has to be entered as the rate, said on the page |
+| **tip credit** | ❌ | **asked**, default $0; a rate under $7.25 raises a flag |
+| **ttoc_code** | ❌ | **asked**: suggested from role, owner confirms up to two codes plus a "000" checkbox |
+| hire / termination | ⚠️ `deletedTime` only | hours come from shifts, so not needed |
+| Shift in/out | ✅ `/shifts` `inTime`/`outTime`, `overrideInTime`/`overrideOutTime` (edited punches are flagged) | read; open shifts are flagged and left out |
+| unpaid breaks | ⚠️ only as separate clock-out/in pairs | read as gaps between shifts; a paid break recorded as clocked-out would be undercounted (owner's records govern) |
+| declared_cash_tips | ✅ shift `cashTipsCollected` | read → TP |
+| Payment tip, tender, result, refunds | ✅ `tipAmount`, `tender.labelKey`, `result`, `refunds.elements[].tipAmount` | read → TP |
+| Payment server | ✅ `order.employee` (with `expand=order`), else `payment.employee` | read: the order's server gets the tip |
+| Service charge | ✅ `payment.serviceCharge.amount` + name | read, **excluded from TP**, listed per row |
+| **is the service charge paid to staff?** | ❌ | **asked**, default kept by the business; if paid to the server it enters their regular rate (FS #15) |
+| **tip-share / pool distributions** | ❌ no tip-pool object in the REST API | **asked** as each employee's year totals shared in and shared out, flagged until answered |
+| **off-register pay** (bonus, differential, commission) | ❌ | **asked** as dated amounts or date ranges, spread across workweeks by hours worked (29 CFR 778.209) |
+| cash tips on a cash payment vs. clock-out declaration overlap | ❌ unknowable from rows | **asked** once per business, default "count both", shown |
+
+**Verdict: buildable without shrinking the model.** Every field Clover can't hold goes to the owner
+as a question with a visible default and a flag. Two fields are not fillable at the grain the
+ideal model wants. **Per-job rates:** Clover shifts don't carry the job, so a person paid
+different rates for different jobs in one week needs one blended rate. **Breaks:** only clock-out
+gaps are visible. Neither changes TP, and both are named on the page. Neither is silently guessed.
+
+Sandbox caveats, which are not product gaps: Clover's REST API won't create native card payments,
+so the seeded non-cash tips sit on the sandbox's Check tender. A real card tip arrives on the same
+`/payments` row with the same `tipAmount`. Refunded tips were not seeded (refunds need a card
+processor); the refund path is covered by the unit tests.

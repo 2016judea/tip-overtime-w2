@@ -151,7 +151,7 @@
         <option value="exempt" ${st === "exempt" ? "selected" : ""}>Exempt (no overtime)</option></select>
         <span class="check"><input type="checkbox" data-k="statusConfirmed" data-emp="${e.id}" ${a.statusConfirmed ? "checked" : ""}> confirmed</span></span></label>
       ${st === "hourly" ? `
-        <div class="sub">Hourly rate${rates.length > 1 ? "s" : ""} <small>Clover does not store wages. Enter what you pay.</small></div>
+        <div class="sub">Hourly rate${rates.length > 1 ? "s" : ""} <small>Clover does not store wages. Enter what you pay. Different rates for different jobs? Clover doesn't record which job a shift was, so enter the blended rate.</small></div>
         ${rates.map((r, i) => `<div class="row"><input type="date" data-k="rateFrom" data-emp="${e.id}" data-i="${i}" value="${r.from}" aria-label="from"><input inputmode="decimal" data-k="rateCents" data-emp="${e.id}" data-i="${i}" value="${r.cents ? (r.cents / 100).toFixed(2) : ""}" placeholder="$/hour">${i ? `<button class="x" data-act="delRate" data-emp="${e.id}" data-i="${i}" aria-label="remove">×</button>` : ""}</div>`).join("")}
         <button class="link" data-act="addRate" data-emp="${e.id}">+ rate changed during the year</button>
         <label>Tip credit taken, per hour <input inputmode="decimal" data-k="tipCredit" data-emp="${e.id}" value="${a.tipCreditCents ? (a.tipCreditCents / 100).toFixed(2) : ""}" placeholder="$0.00">
@@ -166,7 +166,7 @@
 
       <h4>Tips → Box 12 code TP: ${usd(t.totalCents)}</h4>
       <table class="math"><tbody>
-        <tr><td>Charged tips (card)</td><td>${usd(t.cardCents)}</td></tr>
+        <tr><td>Charged tips (card and other non-cash)</td><td>${usd(t.cardCents)}</td></tr>
         <tr><td>Tips rung on cash payments</td><td>${usd(t.cashTenderCents)}</td></tr>
         <tr><td>Cash tips declared at clock-out</td><td>${usd(t.declaredCents)}</td></tr>
         <tr><td>Tips shared in (outside Clover)</td><td>${usd(t.shareInCents)}</td></tr>
