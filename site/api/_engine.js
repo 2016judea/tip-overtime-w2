@@ -45,19 +45,22 @@ function zoned(tz, y, m, d, h = 0) { // local wall time -> UTC ms
 function localDate(tz, t) { const p = tzParts(tz, t); return `${p.year}-${p.month}-${p.day}`; }
 function localStamp(tz, t) { const p = tzParts(tz, t); return `${p.year}-${p.month}-${p.day} ${p.hour}:${p.minute}`; }
 
-// ---- workweeks [FAQ Q13]: fixed 168 h windows from the owner's chosen start, no averaging.
-// The first window is the one containing Jan 1 local midnight. Stepping exactly 168 h means a
-// boundary set at local midnight reads 01:00 or 23:00 after a DST change; that is the literal rule.
+// ---- workweeks [FAQ Q13]: a fixed, regularly recurring 7-day period starting on the day and hour the
+// employer set, no averaging. The start is held on the business's LOCAL clock (Sunday 00:00 stays
+// Sunday 00:00 all year), so the two weeks holding a DST change run 167 h and 169 h. Stepping a strict
+// 168 h from a winter anchor put every summer boundary at 01:00 and moved a Saturday-night shift's hour
+// into the wrong week in the sandbox run (2026-11-02); no payroll counts weeks that way.
 function workweeks(tz, year, startWeekday, startHour) {
   const jan1 = zoned(tz, year, 1, 1, 0);
   const jan1Dow = new Date(Date.UTC(year, 0, 1)).getUTCDay();
   let back = (jan1Dow - startWeekday + 7) % 7;
-  let anchor = zoned(tz, year, 1, 1 - back, startHour);
-  if (anchor > jan1) anchor = zoned(tz, year, 1, 1 - back - 7, startHour);
+  if (zoned(tz, year, 1, 1 - back, startHour) > jan1) back += 7;
   const end = zoned(tz, year + 1, 1, 1, 0);
   const weeks = [];
-  for (let s = anchor; s < end; s += WEEK) {
-    const e = s + WEEK;
+  for (let k = 0; ; k++) {
+    const s = zoned(tz, year, 1, 1 - back + 7 * k, startHour);
+    if (s >= end) break;
+    const e = zoned(tz, year, 1, 1 - back + 7 * (k + 1), startHour);
     const endDate = localDate(tz, e - 1);
     weeks.push({ start: s, end: e, label: `${localDate(tz, s)} → ${endDate}`, endDate,
       inYear: endDate.slice(0, 4) === String(year) });

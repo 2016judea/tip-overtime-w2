@@ -145,9 +145,12 @@ test("Unknowns are flagged, never silently guessed", () => {
   assert.equal(r.employees[0].ready, false);
 });
 
-test("Workweeks are fixed 168 h windows covering the year, the first containing Jan 1", () => {
+test("Workweeks start at the same LOCAL day and hour all year, the first containing Jan 1", () => {
   const ws = workweeks(TZ, 2026, 0, 0);
-  for (let i = 1; i < ws.length; i++) assert.equal(ws[i].start - ws[i - 1].start, 168 * H);
+  const lens = new Set();
+  for (let i = 1; i < ws.length; i++) lens.add((ws[i].start - ws[i - 1].start) / H);
+  assert.deepEqual([...lens].sort(), [167, 168, 169]); // the two DST weeks
+  for (const w of ws) assert.equal(new Intl.DateTimeFormat("en-US", { timeZone: TZ, hourCycle: "h23", hour: "2-digit", weekday: "short" }).format(new Date(w.start)).replace(",", ""), "Sun 00");
   assert.ok(ws[0].start <= zoned(TZ, 2026, 1, 1, 0) && ws[0].end > zoned(TZ, 2026, 1, 1, 0));
   assert.equal(ws[0].label.slice(0, 10), "2025-12-28");
 });
@@ -159,4 +162,13 @@ test("A workweek ending in the next year is not counted in this year's TT", () =
   const r = run(s, [], { rates: [{ from: "2026-01-01", cents: 2000 }] });
   assert.equal(r.employees[0].boxes.TT, 0);
   assert.ok(r.employees[0].overtime.weeks[0].flags.some((f) => /outside the tax year/.test(f)));
+});
+
+test("Summer (DST) Saturday-night shift splits at local midnight, not 01:00", () => {
+  // Sandbox regression 2026-11-02: Sat 2026-10-10 18:00 + 10 h in Los Angeles = 6 h + 4 h
+  const LA = "America/Los_Angeles";
+  const a = zoned(LA, 2026, 10, 10, 18);
+  const r = report({ business: { name: "x", tz: LA, year: 2026 }, employees: [{ id: "A", name: "A" }], shifts: [{ id: "x", employeeId: "A", in: a, out: a + 10 * H }], payments: [] },
+    { employees: { A: { rates: [{ from: "2026-01-01", cents: 1000 }] } } });
+  assert.deepEqual(r.employees[0].overtime.weeks.map((w) => w.hours), [6, 4]);
 });
