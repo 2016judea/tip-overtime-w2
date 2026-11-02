@@ -1,0 +1,6 @@
+{
+  "name": "tip-overtime-w2",
+  "private": true,
+  "license": "MIT",
+  "scripts": { "test": "node --test tests/*.test.js" }
+}
