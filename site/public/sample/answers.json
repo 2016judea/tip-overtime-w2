@@ -1,0 +1,89 @@
+{
+ "workweekStart": {
+  "weekday": 0,
+  "hour": 0
+ },
+ "serviceChargesTo": "house",
+ "cashPaymentTipsInDeclarations": false,
+ "employees": {
+  "E1": {
+   "status": "hourly",
+   "statusConfirmed": true,
+   "rates": [
+    {
+     "from": "2026-01-01",
+     "cents": 1200
+    }
+   ],
+   "ttoc": [
+    "102"
+   ],
+   "ttocConfirmed": true,
+   "tipShareInCents": 0,
+   "tipShareOutCents": 61500,
+   "otherPay": []
+  },
+  "E2": {
+   "status": "hourly",
+   "statusConfirmed": true,
+   "rates": [
+    {
+     "from": "2026-01-01",
+     "cents": 1350
+    }
+   ],
+   "ttoc": [
+    "101"
+   ],
+   "ttocConfirmed": true,
+   "tipShareInCents": 0,
+   "tipShareOutCents": 0,
+   "otherPay": []
+  },
+  "E3": {
+   "status": "hourly",
+   "statusConfirmed": true,
+   "rates": [
+    {
+     "from": "2026-01-01",
+     "cents": 1900
+    },
+    {
+     "from": "2026-07-01",
+     "cents": 2050
+    }
+   ],
+   "ttoc": [
+    "105"
+   ],
+   "ttocConfirmed": true,
+   "tipShareInCents": 61500,
+   "tipShareOutCents": 0,
+   "otherPay": [
+    {
+     "from": "2026-04-01",
+     "to": "2026-06-30",
+     "cents": 30000,
+     "note": "Q2 kitchen inspection bonus"
+    }
+   ]
+  },
+  "E4": {
+   "status": "hourly",
+   "statusConfirmed": true,
+   "rates": [
+    {
+     "from": "2026-01-01",
+     "cents": 1500
+    }
+   ],
+   "ttoc": [
+    "107"
+   ]
+  },
+  "E5": {
+   "status": "exempt",
+   "statusConfirmed": true
+  }
+ }
+}

@@ -107,4 +107,4 @@ function suggestTtoc(text) {
   for (const [re, code] of HINTS) if (re.test(text || "")) return code;
   return null;
 }
-module.exports = { TTOC, suggestTtoc };
+if (typeof module !== "undefined" && module.exports) module.exports = { TTOC, suggestTtoc }; else globalThis.W2Ttoc = { TTOC, suggestTtoc };

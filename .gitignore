@@ -3,3 +3,5 @@
 node_modules/
 private/
 .DS_Store
+site/public/js/engine.js
+site/public/js/ttoc.js

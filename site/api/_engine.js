@@ -268,4 +268,7 @@ function report(input, answers) {
   };
 }
 
-module.exports = { report, workweeks, zoned, localDate, tzOffset, rateOn, DEFAULT_ANSWERS, HOUR, WEEK, WEEKDAYS };
+const API = { report, workweeks, zoned, localDate, tzOffset, rateOn, DEFAULT_ANSWERS, HOUR, WEEK, WEEKDAYS };
+// Same file runs in Node (the functions, the tests) and in the browser (the report page recomputes as
+// the owner answers). scripts/deploy.py copies it to public/js/ unchanged.
+if (typeof module !== "undefined" && module.exports) module.exports = API; else globalThis.W2Engine = API;

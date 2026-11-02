@@ -1,0 +1,13 @@
+{
+  "buildCommand": "echo build",
+  "outputDirectory": "public",
+  "functions": { "api/data.js": { "maxDuration": 300 } },
+  "rewrites": [
+    { "source": "/clover", "destination": "/api/clover/launch" },
+    { "source": "/clover/callback", "destination": "/api/clover/callback" }
+  ],
+  "headers": [
+    { "source": "/sample/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] },
+    { "source": "/js/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] }
+  ]
+}

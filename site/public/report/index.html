@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/style.css"><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script><script defer src="/_vercel/insights/script.js"></script>
+<title>Your W-2 tip and overtime report</title><meta name="robots" content="noindex">
+</head><body>
+<div class="wrap">
+<header class="top"><a class="brand" href="/">Tip &amp; Overtime W-2s</a><a class="small" href="/api/logout">Sign out</a></header>
+<section class="hero" style="padding-top:12px"><h1 id="biz" style="font-size:clamp(24px,5vw,34px)">Your 2026 W-2 figures</h1>
+<p class="note" id="pulled"></p>
+<p class="note"><b>We calculate and show the math. You or your accountant review it and file.</b> Nothing here is sent to the IRS or SSA. Answer what's flagged; every figure updates as you go and your answers are saved.</p></section>
+<div id="app"><p class="muted">Reading your Clover register for 2026. A busy year can take a minute…</p></div>
+</div>
+<footer><div class="wrap">Tip &amp; Overtime W-2s, by Brick &amp; Mortar. We calculate and show the math. You or your accountant file. · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · Help: aidan@brickandmortar.dev</div></footer>
+<script src="/js/ttoc.js"></script><script src="/js/engine.js"></script><script src="/js/app.js"></script>
+<script>
+fetch('/api/data').then(async r=>{
+  if(r.status===401){location.href='/connect/';return}
+  const j=await r.json(); if(!r.ok) throw new Error(j.error||r.status);
+  document.getElementById('biz').textContent=j.input.business.name+' — 2026 W-2 figures';
+  document.getElementById('pulled').textContent='Read from Clover '+new Date(j.pulledAt).toLocaleString()+' · '+j.input.shifts.length+' shifts, '+j.input.payments.length+' payments. Run it again in January for the full year.';
+  W2App.mount(document.getElementById('app'),'live',j.input,j.answers||{});
+}).catch(e=>{document.getElementById('app').innerHTML='<p class="muted">Could not read your register: '+String(e.message||e).replace(/</g,'&lt;')+'. Refresh to try again, or reopen the app from Clover.</p>'});
+</script>
+</body></html>

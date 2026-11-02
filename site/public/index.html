@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/style.css"><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script><script defer src="/_vercel/insights/script.js"></script>
+<title>Tip &amp; Overtime W-2s for Clover</title>
+<meta name="description" content="Connect your Clover and get every employee's 2026 tip and overtime numbers for the W-2s, with the math shown.">
+</head><body>
+<div class="wrap">
+<header class="top"><a class="brand" href="/">Tip &amp; Overtime W-2s</a><a class="small" href="#sample">Sample report</a></header>
+<section class="hero">
+  <span class="due">2026 W-2s due January 31, 2027</span>
+  <h1>This year every W-2 needs your staff's tips and overtime on it.</h1>
+  <p class="lede">Connect your Clover and get every employee's 2026 tip and overtime numbers for the W-2s, with the math shown.</p>
+  <div class="ctas"><a class="btn primary" href="#sample">See a sample report</a></div>
+  <p class="note">Coming to the Clover App Market. Box 12 code TP (tips), Box 12 code TT (qualified overtime), Box 14b (tipped occupation code), for every employee.</p>
+</section>
+<div class="samplebar" id="sample"><b>SAMPLE.</b> Larkspur Café is made up: fake people, fake register. Every number below is worked out from its fake Clover rows the way yours would be. Tap a person to see the math, and change any answer to watch it move.</div>
+<div id="app"><p class="muted">Loading the sample…</p></div>
+<section class="how">
+  <div><h3>What it reads</h3><p>From your Clover, read-only: employees, clock-ins and clock-outs, cash tips declared at clock-out, and every tip and service charge on a payment.</p></div>
+  <div><h3>What it asks you</h3><p>What Clover doesn't know: pay rates, who is exempt, your workweek's start day, tip sharing done off the register, bonuses, and each person's occupation code. Each one has a default you can see.</p></div>
+  <div><h3>What it never does</h3><p>File. We calculate and show the math. You or your accountant put it on the W-2s. Nothing is ever sent to the IRS or SSA.</p></div>
+</section>
+</div>
+<footer><div class="wrap">Tip &amp; Overtime W-2s, by Brick &amp; Mortar. We calculate and show the math. You or your accountant file. · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · Help: aidan@brickandmortar.dev</div></footer>
+<script src="/js/ttoc.js"></script><script src="/js/engine.js"></script><script src="/js/app.js"></script>
+<script>
+Promise.all([fetch('/sample/input.json').then(r=>r.json()),fetch('/sample/answers.json').then(r=>r.json())])
+ .then(([i,a])=>W2App.mount(document.getElementById('app'),'sample',i,a))
+ .catch(()=>{document.getElementById('app').innerHTML='<p class="muted">The sample did not load. Refresh to try again.</p>'});
+</script>
+</body></html>
