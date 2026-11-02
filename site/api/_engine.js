@@ -255,12 +255,11 @@ function report(input, answers) {
     if (tips.totalCents > 0 && !ttoc.confirmed) flags.push("Tipped occupation code not confirmed");
     if (e.tipShareInCents === undefined && e.tipShareOutCents === undefined && tips.totalCents > 0) flags.push("Tip sharing outside Clover assumed none — confirm");
     if (e.otherPay === undefined && ot.weeks.some((w) => w.otHours > 0)) flags.push("Off-register pay (bonuses, differentials) assumed none — it would raise the regular rate");
-    if (tips.serviceChargesExcluded.totalCents) flags.push(`${tips.serviceChargesExcluded.rows.length} service charge(s) excluded from tips`);
     const weeksAffected = ot.weeks.filter((w) => w.flags.length && w.otHours > 0).length;
     return { id: emp.id, name: emp.name, role: emp.role || "", status: ot.status,
       boxes: { TP: tips.totalCents, TT: ot.totalCents, "14b": ttoc.codes },
       ttoc, tips, overtime: ot, flags, weeksAffected,
-      ready: flags.filter((f) => !/service charge\(s\) excluded/.test(f)).length === 0 };
+      ready: flags.length === 0 };
   });
   return {
     business: input.business, year, generatedFrom: input.source || "register",

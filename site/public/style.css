@@ -58,7 +58,7 @@ td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertic
 table.math td:last-child{text-align:right}
 table.math tr.sum td{font-weight:700;border-top:2px solid var(--ink)}
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table.weeks{min-width:640px} table.weeks td:nth-child(2),table.weeks td:nth-child(4),table.weeks td:nth-child(5),table.weeks td:nth-child(6){text-align:right;white-space:nowrap}
+table.weeks{min-width:600px} td.wk{white-space:nowrap} td.wk .wflag{white-space:normal;min-width:140px} table.weeks td:nth-child(2),table.weeks td:nth-child(3),table.weeks td:nth-child(4),table.weeks td:nth-child(5){text-align:right;white-space:nowrap} table.weeks th:nth-child(2){white-space:nowrap}
 table.weeks tr.out td{color:var(--muted);text-decoration:line-through}
 .wflag{font-size:12px;color:var(--warn);margin-top:2px;text-decoration:none}
 details{margin:8px 0} summary{cursor:pointer;color:var(--muted);font-size:14px;padding:6px 0}
@@ -74,3 +74,4 @@ details{margin:8px 0} summary{cursor:pointer;color:var(--muted);font-size:14px;p
 footer{border-top:1px solid var(--line);margin-top:36px;padding:18px 0 40px;font-size:14px;color:var(--muted)}
 footer a{color:var(--muted)}
 .prose h2{font-size:20px;margin-top:28px} .prose{max-width:42em}
+table.weeks td:nth-child(6){white-space:nowrap}

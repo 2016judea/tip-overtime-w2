@@ -7,6 +7,10 @@
   const usd = (c) => (c < 0 ? "−" : "") + "$" + (Math.abs(c) / 100).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const rate = (c) => "$" + (c / 100).toFixed(4).replace(/0{1,2}$/, "");
   const dollarsToCents = (v) => { const n = parseFloat(String(v).replace(/[$,\s]/g, "")); return isFinite(n) ? Math.round(n * 100) : 0; };
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const shortWeek = (l) => { const m = /(\d{4})-(\d\d)-(\d\d) → (\d{4})-(\d\d)-(\d\d)/.exec(l); if (!m) return l;
+    const a = `${MON[+m[2] - 1]} ${+m[3]}`, b = m[5] === m[2] ? `${+m[6]}` : `${MON[+m[5] - 1]} ${+m[6]}`;
+    return `${a}–${b}${m[4] !== m[1] ? `, ${m[4]}` : ""}`; };
   const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
   let S = null; // { mode, input, answers, root, open:Set }
@@ -119,7 +123,7 @@
     return `<article class="emp ${e.ready ? "" : "needs"}">
       <button class="emphead" data-act="toggle" data-emp="${e.id}" aria-expanded="${open}">
         <span class="who"><b>${esc(e.name)}</b><small>${esc(e.role || meta.systemRole || "")}${meta.former ? " · former employee" : ""}</small></span>
-        <span class="chip ${e.ready ? "ok" : "warn"}">${e.ready ? "Ready" : `${e.flags.filter((f) => !/excluded/.test(f)).length} to answer`}</span>
+        <span class="chip ${e.ready ? "ok" : "warn"}">${e.ready ? "Ready" : `${e.flags.length} to answer`}</span>
       </button>
       <div class="boxes">
         <div><small>Box 12 · TP</small><b>${usd(e.boxes.TP)}</b></div>
@@ -142,8 +146,8 @@
       ${flags}
       <h4>Pay</h4>
       <label>Pay type <span class="row"><select data-k="status" data-emp="${e.id}">
-        <option value="hourly" ${st === "hourly" ? "selected" : ""}>Hourly (overtime-eligible)</option>
-        <option value="salaried" ${st === "salaried" ? "selected" : ""}>Salaried, overtime-eligible</option>
+        <option value="hourly" ${st === "hourly" ? "selected" : ""}>Hourly</option>
+        <option value="salaried" ${st === "salaried" ? "selected" : ""}>Salaried, gets overtime</option>
         <option value="exempt" ${st === "exempt" ? "selected" : ""}>Exempt (no overtime)</option></select>
         <span class="check"><input type="checkbox" data-k="statusConfirmed" data-emp="${e.id}" ${a.statusConfirmed ? "checked" : ""}> confirmed</span></span></label>
       ${st === "hourly" ? `
@@ -187,9 +191,9 @@
       <h4>Overtime → Box 12 code TT: ${usd(o.totalCents)}</h4>
       ${st === "exempt" ? `<p class="muted">Exempt: no overtime is required, so nothing qualifies.</p>` : `
       <p class="muted">Each workweek: hours over 40 × ½ × regular rate. Regular rate = pay for the week ÷ hours worked. Only the FLSA's required "half" counts, even if you pay double time (IRS FS-2026-13, Q12 and Q16).</p>
-      <div class="scroll"><table class="weeks"><thead><tr><th>Workweek</th><th>Hours</th><th>Pay that sets the rate</th><th>Regular rate</th><th>OT hours</th><th>Qualified OT</th></tr></thead><tbody>
-      ${otWeeks.map((w) => `<tr class="${w.inYear ? "" : "out"}"><td>${esc(w.label)}${w.flags.length ? `<div class="wflag">${w.flags.map(esc).join("<br>")}</div>` : ""}</td><td>${w.hours.toFixed(2)}</td>
-        <td>${w.parts.map((p) => `${esc(p.what)} = ${usd(Math.round(p.cents))}`).join("<br>")}</td><td>${rate(w.regularRateCents)}/h</td><td>${w.otHours.toFixed(2)}</td><td><b>${usd(w.qualifiedOtCents)}</b></td></tr>`).join("") || `<tr><td colspan="6" class="muted">No workweek over 40 hours.</td></tr>`}
+      <div class="scroll"><table class="weeks"><thead><tr><th>Workweek</th><th>Qualified OT</th><th>OT hours</th><th>Regular rate</th><th>Hours</th><th>Pay that sets the rate</th></tr></thead><tbody>
+      ${otWeeks.map((w) => `<tr class="${w.inYear ? "" : "out"}"><td class="wk">${esc(shortWeek(w.label))}${w.flags.length ? `<div class="wflag">${w.flags.map(esc).join("<br>")}</div>` : ""}</td><td><b>${usd(w.qualifiedOtCents)}</b></td><td>${w.otHours.toFixed(2)}</td><td>${rate(w.regularRateCents)}/h</td><td>${w.hours.toFixed(2)}</td>
+        <td>${w.parts.map((p) => `${esc(p.what)} = ${usd(Math.round(p.cents))}`).join("<br>")}</td></tr>`).join("") || `<tr><td colspan="6" class="muted">No workweek over 40 hours.</td></tr>`}
       </tbody></table></div>
       <button class="link" data-act="allweeks" data-emp="${e.id}">${S.showAll.has(e.id) ? "Show only overtime weeks" : `Show all ${o.weeks.length} workweeks and their shifts`}</button>
       ${S.showAll.has(e.id) ? `<details><summary>Every clock-in and clock-out</summary>${rowsTable(o.weeks.flatMap((w) => w.shifts), ["from", "to", "hours"], ["In", "Out", "Hours"], 2000)}</details>` : ""}`}
