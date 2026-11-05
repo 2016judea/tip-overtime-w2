@@ -1,5 +1,5 @@
 // Shared by the functions. Files starting with "_" are not routes on Vercel.
-// Pattern: ~/Desktop/block-brief/site/api/_lib.js (Clover OAuth v2 + D1 over REST, no SDKs).
+// Pattern: ~/Desktop/workspace/block-brief/site/api/_lib.js (Clover OAuth v2 + D1 over REST, no SDKs).
 const crypto = require("crypto");
 
 const SITE = process.env.SITE_URL || "https://tip-overtime-w2.vercel.app";

@@ -74,7 +74,7 @@ Tool skill: `~/.claude/skills/clover-api/SKILL.md`. Developer account and sandbo
 
 ## Running it
 
-    set -a; . ~/Desktop/bricks/.env; set +a   # VERCEL_TOKEN
+    set -a; . ~/Desktop/workspace/bricks/.env; set +a   # VERCEL_TOKEN
     node scripts/make_sample.js               # rebuild the SAMPLE café
     python3 scripts/deploy.py                 # Vercel over REST (copies the engine to public/js first)
     python3 scripts/vercel_env.py KEY…        # push .env keys to Vercel
