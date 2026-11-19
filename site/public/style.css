@@ -75,3 +75,9 @@ footer{border-top:1px solid var(--line);margin-top:36px;padding:18px 0 40px;font
 footer a{color:var(--muted)}
 .prose h2{font-size:20px;margin-top:28px} .prose{max-width:42em}
 table.weeks td:nth-child(6){white-space:nowrap}
+table.occ td small{display:block;color:var(--muted);font-size:12px;font-weight:400}
+table.occ td:not(:first-child),table.occ th:not(:first-child){text-align:right;white-space:nowrap}
+table.occ th{font-size:13px;color:var(--muted);font-weight:600;vertical-align:bottom}
+@media (max-width:600px){table.occ .wide{display:none} table.occ th{white-space:normal!important}}
+[hidden]{display:none!important}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 12px}

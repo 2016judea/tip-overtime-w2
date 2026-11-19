@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "tip-overtime-deductions": {
+      "type": "streamable-http",
+      "url": "https://tip-overtime-w2.vercel.app/mcp"
+    }
+  }
+}

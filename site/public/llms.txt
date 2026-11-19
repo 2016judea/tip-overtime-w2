@@ -1,0 +1,12 @@
+# Tip & Overtime Deductions
+
+> Works out the federal "no tax on tips" and "no tax on overtime" deductions (Schedule 1-A, Form 1040, tax years 2025-2028) and the new 2026 W-2 boxes (box 12 TP, TT; box 14b), in code, with every Schedule 1-A line and a citation for every rule. Free. Calculates and shows; files nothing; stores nothing.
+
+A median waiter (BLS pay $35,230) saves $120 of federal income tax for every $1,000 in tips. The most no tax on tips can save them in a year is $2,048, because that is all the income tax they owe. A waiter in the bottom tenth ($18,100) can save at most $200.
+
+- [Worksheet](https://tip-overtime-w2.vercel.app/worksheet/): fill in W-2 box 12 TP/TT (or pay stubs), filing status and AGI; get both deductions line by line, printable for a preparer.
+- [What no tax on tips is worth, by tipped occupation](https://tip-overtime-w2.vercel.app/no-tax-on-tips-by-occupation/): BLS May 2025 pay for all 71 IRS tipped occupations, federal tax saved per $1,000 of tips and the most it can save in a year.
+- [Full data and rules as text](https://tip-overtime-w2.vercel.app/llms-full.txt)
+- [MCP connector](https://tip-overtime-w2.vercel.app/ai/): Streamable HTTP at https://tip-overtime-w2.vercel.app/mcp, no auth. Tools: tip_overtime_deduction, w2_tip_overtime_boxes, tipped_occupation_code.
+- [For Clover merchants](https://tip-overtime-w2.vercel.app/): every employee's 2026 TP, TT and 14b from the register.
+- [Source code](https://github.com/2016judea/tip-overtime-w2), MIT.

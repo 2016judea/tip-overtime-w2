@@ -1,0 +1,108 @@
+# Tip & Overtime Deductions
+
+> Works out the federal "no tax on tips" and "no tax on overtime" deductions (Schedule 1-A, Form 1040, tax years 2025-2028) and the new 2026 W-2 boxes (box 12 TP, TT; box 14b), in code, with every Schedule 1-A line and a citation for every rule. Free. Calculates and shows; files nothing; stores nothing.
+
+A median waiter (BLS pay $35,230) saves $120 of federal income tax for every $1,000 in tips. The most no tax on tips can save them in a year is $2,048, because that is all the income tax they owe. A waiter in the bottom tenth ($18,100) can save at most $200.
+
+- [Worksheet](https://tip-overtime-w2.vercel.app/worksheet/): fill in W-2 box 12 TP/TT (or pay stubs), filing status and AGI; get both deductions line by line, printable for a preparer.
+- [What no tax on tips is worth, by tipped occupation](https://tip-overtime-w2.vercel.app/no-tax-on-tips-by-occupation/): BLS May 2025 pay for all 71 IRS tipped occupations, federal tax saved per $1,000 of tips and the most it can save in a year.
+- [Full data and rules as text](https://tip-overtime-w2.vercel.app/llms-full.txt)
+- [MCP connector](https://tip-overtime-w2.vercel.app/ai/): Streamable HTTP at https://tip-overtime-w2.vercel.app/mcp, no auth. Tools: tip_overtime_deduction, w2_tip_overtime_boxes, tipped_occupation_code.
+- [For Clover merchants](https://tip-overtime-w2.vercel.app/): every employee's 2026 TP, TT and 14b from the register.
+- [Source code](https://github.com/2016judea/tip-overtime-w2), MIT.
+
+## The rules (each with its source)
+
+- Tips cap: Up to $25,000 of qualified tips per return, any filing status. [26 U.S.C. § 224(b)(1); 26 CFR 1.224-1(b)(1)]
+- Overtime cap: Up to $12,500 of qualified overtime ($25,000 on a joint return). [26 U.S.C. § 225(b)(1)]
+- Phase-out: Each deduction falls by $100 for every full $1,000 of MAGI over $150,000 ($300,000 joint). Schedule 1-A rounds the thousands DOWN. [§ 224(b)(2), § 225(b)(2); Schedule 1-A (2026 draft) lines 13 and 25]
+- Married filing separately: No deduction. Married couples must file jointly. [§ 224(f), § 225(e)]
+- Social Security number: Required, valid for work. [§ 224(e), § 225(d)]
+- Years: Tax years 2025 through 2028. [§ 224(h), § 225(g)]
+- Qualified tips: Voluntary cash or card tips (incl. tip pools) in an occupation on the IRS list. Service charges and automatic gratuities are not tips, even when paid to staff. [§ 224(d); 26 CFR 1.224-1(c)(4); irs.gov/tippedoccupations]
+- Qualified overtime: Only the FLSA-required premium: hours over 40 in a workweek x 0.5 x the regular rate. Not double time's extra half, not daily or weekend premiums, nothing for FLSA-exempt staff. [§ 225(c)(1); 2026 W-2 instructions code TT; Notice 2025-69]
+- Where it goes (2026): Schedule 1-A Part II (tips, line 15) and Part III (overtime, line 27); total to Form 1040 line 13a. You can take it with the standard deduction. [Schedule 1-A and Form 1040, 2026 drafts]
+- Where it goes (2025): Schedule 1-A lines 13 and 21; total via line 38 to Form 1040 line 13b. [Schedule 1-A (2025)]
+- W-2 (2026): Box 12 code TP = cash tips reported to the employer; code TT = qualified overtime; box 14b = up to two Treasury Tipped Occupation Codes, 000 if any tips came in an unlisted occupation. [2026 General Instructions for Forms W-2 and W-3]
+- Not reduced: Social Security and Medicare tax, and state income tax unless the state follows. [§ 224, § 225 are income tax deductions only]
+- Pay-stub estimates (before the W-2): Total overtime pay at 1.5x / 3; at 2x / 4; a stated 1.5x premium as is; a stated 2x premium / 2. [Notice 2025-69, methods A-D]
+
+## What no tax on tips is worth, by Treasury Tipped Occupation Code
+
+Pay: BLS Occupational Employment and Wage Statistics, May 2025, national, all industries (wages include tips). Each Treasury Tipped Occupation Code is matched to its related SOC code from the IRS list; where there are several, the one with the most jobs is used. Tax: 2026 federal rates and the $16,100 standard deduction (Rev. Proc. 2025-32), single filer, no other income, before credits. "Per $1,000" is the tax on the last $1,000 of taxable income. "Most it can save" assumes $25,000 of the pay (or all of it, if less) is qualified tips: it is the ceiling, not a typical figure. Social Security and Medicare tax (7.65%) and state income tax are not reduced by this deduction.
+
+code | occupation | related SOC used | BLS jobs in that SOC (tipped or not) | p10 pay | median pay | p90 pay | saved per $1,000 tips at median | most it can save at p10 | at median | at p90
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+101 | Bartenders | 35-3011 | 756,390 | $20,110 | $34,340 | $73,770 | $120 | $401 | $1,941 | $3,727
+102 | Wait staff | 35-3031 | 2,270,910 | $18,100 | $35,230 | $64,720 | $120 | $200 | $2,048 | $3,000
+103 | Food or beverage servers, non-restaurant | 35-3041 | 293,900 | $28,030 | $35,360 | $46,120 | $120 | $1,193 | $2,063 | $2,852
+104 | Dining room and cafeteria attendants and bartender helpers | 35-9011 | 542,750 | $21,300 | $33,980 | $46,570 | $120 | $520 | $1,898 | $2,861
+105 | Chefs and cooks | 35-2014 | 1,409,890 | $28,700 | $37,390 | $47,900 | $120 | $1,264 | $2,307 | $2,888
+106 | Food preparation workers | 35-1012 | 1,223,240 | $29,940 | $44,080 | $65,570 | $120 | $1,413 | $2,812 | $3,000
+107 | Fast food and counter workers | 35-3023 | 3,854,050 | $22,840 | $31,200 | $42,650 | $120 | $674 | $1,564 | $2,783
+108 | Dishwashers | 35-9021 | 477,450 | $26,200 | $34,810 | $42,860 | $120 | $1,010 | $1,997 | $2,787
+109 | Host staff, restaurant, lounge, and coffee shop | 35-9031 | 432,690 | $22,340 | $31,200 | $43,990 | $120 | $624 | $1,564 | $2,810
+110 | Bakers | 51-3011 | 236,200 | $28,120 | $37,160 | $49,020 | $120 | $1,202 | $2,279 | $2,910
+201 | Gambling dealers | 39-3011 | 83,910 | $24,040 | $34,320 | $77,090 | $120 | $794 | $1,938 | $4,059
+202 | Gambling change persons and booth cashiers | 41-2012 | 21,530 | $24,460 | $36,220 | $60,330 | $120 | $836 | $2,166 | $3,000
+203 | Gambling cage workers | 43-3041 | 14,430 | $29,100 | $37,580 | $49,430 | $120 | $1,312 | $2,330 | $2,919
+204 | Gambling and sports book writers and runners | 39-3012 | 8,950 | $22,090 | $34,980 | $48,270 | $120 | $599 | $2,018 | $2,895
+205 | Dancers | 27-2031 | 8,130 | – | – | – | – | – | – | –
+206 | Musicians and singers | 27-2042 | 36,180 | – | – | – | – | – | – | –
+207 | Disc jockeys, except radio | 27-2091 | 7,920 | – | – | – | – | – | – | –
+208 | Entertainers and performers | 27-2099 | 16,550 | – | – | – | – | – | – | –
+209 | Digital content creators | 27-2099 | 16,550 | – | – | – | – | – | – | –
+210 | Ushers, lobby attendants, and ticket takers | 39-3031 | 121,770 | $23,560 | $32,910 | $42,470 | $120 | $746 | $1,769 | $2,779
+211 | Locker room, coatroom, and dressing room attendants | 39-3093 | 15,560 | $26,590 | $36,300 | $54,260 | $120 | $1,049 | $2,176 | $3,000
+301 | Baggage porters and bellhops | 39-6011 | 28,510 | $27,040 | $37,080 | $51,600 | $120 | $1,094 | $2,270 | $2,962
+302 | Concierges | 39-6012 | 49,240 | $31,620 | $38,950 | $57,570 | $120 | $1,614 | $2,494 | $3,000
+303 | Hotel, motel, and resort desk clerks | 43-4081 | 261,420 | $27,120 | $35,070 | $45,470 | $120 | $1,102 | $2,028 | $2,839
+304 | Maids and housekeeping cleaners | 37-2012 | 860,670 | $27,640 | $35,510 | $48,570 | $120 | $1,154 | $2,081 | $2,901
+401 | Home maintenance and repair workers | 49-9071 | 1,529,700 | $35,350 | $49,590 | $77,180 | $120 | $2,062 | $2,922 | $4,068
+402 | Home landscaping and groundskeeping workers | 37-3011 | 952,640 | $31,150 | $39,150 | $56,730 | $120 | $1,558 | $2,518 | $3,000
+403 | Home electricians | 47-2111 | 757,220 | $42,640 | $63,190 | $108,510 | $120 | $2,783 | $3,000 | $5,500
+404 | Home plumbers | 47-2152 | 465,840 | $44,150 | $63,800 | $108,420 | $120 | $2,813 | $3,000 | $5,500
+405 | Home heating and air conditioning mechanics and installers | 49-9021 | 409,670 | $40,050 | $61,010 | $95,210 | $120 | $2,626 | $3,000 | $5,500
+406 | Home appliance installers and repairers | 49-9031 | 32,150 | $36,190 | $50,990 | $80,660 | $120 | $2,163 | $2,950 | $4,416
+407 | Home cleaning service workers | 37-2012 | 860,670 | $27,640 | $35,510 | $48,570 | $120 | $1,154 | $2,081 | $2,901
+408 | Locksmiths | 49-9094 | 15,040 | $35,530 | $51,320 | $79,400 | $120 | $2,084 | $2,956 | $4,290
+409 | Roadside assistance workers | 53-3032 | 2,062,040 | $40,140 | $58,640 | $79,380 | $120 | $2,637 | $3,000 | $4,288
+501 | Personal care and service workers | 39-9099 | 60,420 | $27,480 | $41,600 | $48,910 | $120 | $1,138 | $2,762 | $2,908
+502 | Private event planners | 13-1121 | 142,860 | $36,830 | $61,160 | $101,700 | $120 | $2,240 | $3,000 | $5,500
+503 | Private event and portrait photographers | 27-4021 | 51,760 | $30,820 | $44,660 | $91,810 | $120 | $1,518 | $2,823 | $5,500
+504 | Private event videographers | 27-4031 | 21,550 | $38,520 | $74,990 | $135,180 | $220 | $2,442 | $3,849 | $5,768
+505 | Event officiants | 21-2011 | 57,200 | $37,860 | $60,810 | $98,890 | $120 | $2,363 | $3,000 | $5,500
+506 | Pet and show animal caretakers | 39-2021 | 266,910 | $27,250 | $35,360 | $50,060 | $120 | $1,115 | $2,063 | $2,931
+507 | Tutors | 25-3041 | 175,070 | $29,430 | $43,350 | $75,990 | $120 | $1,352 | $2,797 | $3,949
+508 | Nannies and babysitters | 39-9011 | 518,910 | $24,260 | $34,980 | $46,010 | $120 | $816 | $2,018 | $2,850
+509 | Visual artists | 27-1013 | 11,220 | $31,630 | $55,490 | $144,210 | $120 | $1,616 | $3,000 | $5,948
+510 | Floral designers | 27-1023 | 40,590 | $28,600 | $37,360 | $51,000 | $120 | $1,252 | $2,303 | $2,950
+601 | Skincare specialists | 39-5094 | 72,890 | $29,580 | $45,330 | $82,050 | $120 | $1,370 | $2,837 | $4,555
+602 | Massage therapists | 31-9011 | 98,790 | $33,640 | $58,450 | $100,200 | $120 | $1,857 | $3,000 | $5,500
+603 | Barbers, hairdressers, hairstylists, and cosmetologists | 39-5012 | 305,710 | $27,040 | $35,790 | $71,190 | $120 | $1,094 | $2,115 | $3,469
+604 | Shampooers | 39-5093 | 8,070 | $23,110 | $32,600 | $38,240 | $120 | $701 | $1,732 | $2,409
+605 | Manicurists and pedicurists | 39-5092 | 152,770 | $28,920 | $35,760 | $50,140 | $120 | $1,290 | $2,111 | $2,933
+606 | Eyebrow and eyelash technicians | 39-5012 | 305,710 | $27,040 | $35,790 | $71,190 | $120 | $1,094 | $2,115 | $3,469
+607 | Makeup artists | 39-5091 | 2,340 | $23,360 | $97,150 | $167,470 | $220 | $726 | $5,500 | $6,000
+608 | Exercise trainers and group fitness instructors | 39-9031 | 322,930 | $28,800 | $47,160 | $83,100 | $120 | $1,276 | $2,873 | $4,660
+609 | Tattoo artists and piercers | 27-1019 | 6,930 | $36,580 | $71,240 | $136,660 | $220 | $2,210 | $3,474 | $5,797
+610 | Tailors | 51-6052 | 13,920 | $29,920 | $41,640 | $63,670 | $120 | $1,410 | $2,763 | $3,000
+611 | Shoe and leather workers and repairers | 51-6041 | 7,450 | $28,210 | $37,800 | $52,550 | $120 | $1,211 | $2,356 | $2,981
+701 | Golf caddies | 39-3091 | 397,830 | $22,350 | $32,150 | $42,490 | $120 | $625 | $1,678 | $2,780
+702 | Self-enrichment teachers | 25-3021 | 332,110 | $30,050 | $46,800 | $92,840 | $120 | $1,426 | $2,866 | $5,500
+703 | Recreational and tour pilots | 53-2012 | 47,630 | $58,850 | $123,220 | $266,620 | $240 | $3,000 | $5,528 | $8,000
+704 | Tour guides | 39-7011 | – | – | – | – | – | – | – | –
+705 | Travel guides | 39-7012 | – | – | – | – | – | – | – | –
+706 | Sports and recreation instructors | 25-3021 | 332,110 | $30,050 | $46,800 | $92,840 | $120 | $1,426 | $2,866 | $5,500
+801 | Parking and valet attendants | 53-6021 | 137,880 | $27,040 | $35,150 | $44,550 | $120 | $1,094 | $2,038 | $2,821
+802 | Taxi and rideshare drivers and chauffeurs | 53-3054 | 41,050 | $34,650 | $42,100 | $75,800 | $120 | $1,978 | $2,772 | $3,930
+803 | Shuttle drivers | 53-3053 | 248,530 | $28,090 | $37,290 | $55,070 | $120 | $1,199 | $2,295 | $3,000
+804 | Goods delivery people | 53-3031 | 409,180 | $22,590 | $38,770 | $59,980 | $120 | $649 | $2,472 | $3,000
+805 | Personal vehicle and equipment cleaners | 53-7061 | 380,430 | $27,380 | $35,830 | $47,610 | $120 | $1,128 | $2,120 | $2,882
+806 | Private and charter bus drivers | 53-3052 | 159,240 | $40,030 | $59,050 | $84,700 | $120 | $2,624 | $3,000 | $4,820
+807 | Water taxi operators and charter boat workers | 53-5022 | 2,480 | $34,510 | $47,520 | $84,530 | $120 | $1,961 | $2,880 | $4,803
+808 | Rickshaw, pedicab, and carriage drivers | 53-6099 | 13,550 | $33,080 | $45,650 | $79,540 | $120 | $1,790 | $2,843 | $4,304
+809 | Home movers | 53-7062 | 2,950,280 | $31,270 | $40,240 | $55,140 | $120 | $1,572 | $2,649 | $3,000
+810 | Gas pump Attendant | 53-6031 | 102,010 | $28,630 | $35,670 | $46,060 | $120 | $1,256 | $2,100 | $2,851
+
+Pay source: BLS OEWS, national, all industries, May 2025; series OEUN0000000000000<SOC><01 employment|04 mean|11-15 p10,p25,median,p75,p90> at https://api.bls.gov/publicAPI/v2/timeseries/data/. Built 2026-11-19.

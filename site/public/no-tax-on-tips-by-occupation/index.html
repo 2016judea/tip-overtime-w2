@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/style.css"><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script><script defer src="/_vercel/insights/script.js"></script>
+<title>No tax on tips: what it's worth, job by job (2026)</title><meta name="description" content="A median waiter (BLS pay $35,230) saves $120 of federal income tax for every $1,000 in tips. The most no tax on tips can save them in a year is $2,048, because that is all the income tax they owe. A waiter in the bottom tenth ($18,100) can save at most $200."><link rel="canonical" href="https://tip-overtime-w2.vercel.app/no-tax-on-tips-by-occupation/">
+<meta property="og:title" content="No tax on tips: what it's worth, job by job (2026)"><meta property="og:description" content="A median waiter (BLS pay $35,230) saves $120 of federal income tax for every $1,000 in tips. The most no tax on tips can save them in a year is $2,048, because that is all the income tax they owe. A waiter in the bottom tenth ($18,100) can save at most $200."><meta property="og:url" content="https://tip-overtime-w2.vercel.app/no-tax-on-tips-by-occupation/">
+<!-- bm-posthog:begin v2 — shared across every Vercel prototype; source ~/.claude/skills/site-analytics/posthog_snippet.html. ?me=1 opts this browser out on this site (?me=0 undoes); ?me=1&next=host1,host2 walks the opt-out across sites; headless (navigator.webdriver) never loads it. -->
+<script>
+(function(w,d){var S="tip-overtime-w2",K="bm_me",me=false,u,p,n;
+try{u=new URLSearchParams(location.search);p=u.get("me");n=u.get("next");}catch(e){}
+try{if(p==="1"){localStorage.setItem(K,"1");}else if(p==="0"){localStorage.removeItem(K);}}catch(e){}
+if(p==="1"){d.cookie=K+"=1; path=/; max-age=63072000; SameSite=Lax";}else if(p==="0"){d.cookie=K+"=; path=/; max-age=0; SameSite=Lax";}
+try{me=localStorage.getItem(K)==="1";}catch(e){}
+if(!me&&/(?:^|; )bm_me=1/.test(d.cookie))me=true;
+if(p==="1"&&n){var h=n.split(","),f=h.shift();if(/^[a-z0-9.-]+$/.test(f)&&(f.slice(-11)===".vercel.app"||f==="brickandmortar.dev"||f==="readglean.com")){location.replace("https://"+f+"/?me=1"+(h.length?"&next="+h.join(","):""));}}
+if(navigator.webdriver===true)return;
+!function(t,e){var o,n,p,r;e.__SV||(w.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify setPersonProperties reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing captureException getFeatureFlag isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(d,w.posthog||[]);
+posthog.init("phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only",persistence:"localStorage+cookie",opt_out_capturing_by_default:me});
+if(me){posthog.opt_out_capturing();}else{if(p==="0")posthog.opt_in_capturing();posthog.register({site:S});}
+})(window,document);
+</script>
+<!-- bm-posthog:end -->
+</head>
+<body><div class="wrap">
+<header class="top"><a class="brand" href="/worksheet/">Tip &amp; Overtime Deductions</a><a class="small" href="/worksheet/">Work out yours</a></header>
+<section class="hero">
+<span class="due">Updated 2026-11-19 · BLS pay May 2025 · 2026 tax rates</span>
+<h1>No tax on tips saves a median waiter $120 per $1,000 in tips.</h1>
+<p class="lede">At most $2,048 a year, not $25,000. The $25,000 is the cap on tips you can deduct; what it saves is the income tax on them. For 60 of the 64 tipped jobs BLS prices, a median earner is in the 12% bracket.</p>
+</section>
+<div class="card" id="try"><h3>Your number</h3>
+<div class="pair"><label>Your pay for the year, tips included<input id="pay" inputmode="decimal" placeholder="35,000"></label><label>Tips in it<input id="tips" inputmode="decimal" placeholder="12,000"></label></div>
+<label>Filing status<select id="st"><option value="single">Single</option><option value="hoh">Head of household</option><option value="mfj">Married filing jointly</option><option value="mfs">Married filing separately</option></select></label>
+<p id="out" class="lede" aria-live="polite">Type your pay and tips.</p>
+<a class="btn primary" id="full" href="/worksheet/">Do the full worksheet (overtime, W-2 boxes) →</a>
+</div>
+<div class="listhead"><h2>By tipped occupation</h2><span class="note">In IRS code order. Single filer, 2026.</span></div>
+<div class="scroll"><table class="occ"><thead><tr><th>Occupation · code</th><th>Median pay</th><th>Saves per $1,000 tips</th><th>Most it can save</th><th class="wide">Most, bottom tenth</th><th class="wide">Most, top tenth</th></tr></thead><tbody>
+<tr><td><b>Bartenders</b><small>101 · SOC 35-3011</small></td><td>$34,340</td><td>$120</td><td><b>$1,941</b></td><td class="wide">$401</td><td class="wide">$3,727</td></tr>
+<tr><td><b>Wait staff</b><small>102 · SOC 35-3031</small></td><td>$35,230</td><td>$120</td><td><b>$2,048</b></td><td class="wide">$200</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Food or beverage servers, non-restaurant</b><small>103 · SOC 35-3041</small></td><td>$35,360</td><td>$120</td><td><b>$2,063</b></td><td class="wide">$1,193</td><td class="wide">$2,852</td></tr>
+<tr><td><b>Dining room and cafeteria attendants and bartender helpers</b><small>104 · SOC 35-9011</small></td><td>$33,980</td><td>$120</td><td><b>$1,898</b></td><td class="wide">$520</td><td class="wide">$2,861</td></tr>
+<tr><td><b>Chefs and cooks</b><small>105 · SOC 35-2014</small></td><td>$37,390</td><td>$120</td><td><b>$2,307</b></td><td class="wide">$1,264</td><td class="wide">$2,888</td></tr>
+<tr><td><b>Food preparation workers</b><small>106 · SOC 35-1012</small></td><td>$44,080</td><td>$120</td><td><b>$2,812</b></td><td class="wide">$1,413</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Fast food and counter workers</b><small>107 · SOC 35-3023</small></td><td>$31,200</td><td>$120</td><td><b>$1,564</b></td><td class="wide">$674</td><td class="wide">$2,783</td></tr>
+<tr><td><b>Dishwashers</b><small>108 · SOC 35-9021</small></td><td>$34,810</td><td>$120</td><td><b>$1,997</b></td><td class="wide">$1,010</td><td class="wide">$2,787</td></tr>
+<tr><td><b>Host staff, restaurant, lounge, and coffee shop</b><small>109 · SOC 35-9031</small></td><td>$31,200</td><td>$120</td><td><b>$1,564</b></td><td class="wide">$624</td><td class="wide">$2,810</td></tr>
+<tr><td><b>Bakers</b><small>110 · SOC 51-3011</small></td><td>$37,160</td><td>$120</td><td><b>$2,279</b></td><td class="wide">$1,202</td><td class="wide">$2,910</td></tr>
+<tr><td><b>Gambling dealers</b><small>201 · SOC 39-3011</small></td><td>$34,320</td><td>$120</td><td><b>$1,938</b></td><td class="wide">$794</td><td class="wide">$4,059</td></tr>
+<tr><td><b>Gambling change persons and booth cashiers</b><small>202 · SOC 41-2012</small></td><td>$36,220</td><td>$120</td><td><b>$2,166</b></td><td class="wide">$836</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Gambling cage workers</b><small>203 · SOC 43-3041</small></td><td>$37,580</td><td>$120</td><td><b>$2,330</b></td><td class="wide">$1,312</td><td class="wide">$2,919</td></tr>
+<tr><td><b>Gambling and sports book writers and runners</b><small>204 · SOC 39-3012</small></td><td>$34,980</td><td>$120</td><td><b>$2,018</b></td><td class="wide">$599</td><td class="wide">$2,895</td></tr>
+<tr><td><b>Ushers, lobby attendants, and ticket takers</b><small>210 · SOC 39-3031</small></td><td>$32,910</td><td>$120</td><td><b>$1,769</b></td><td class="wide">$746</td><td class="wide">$2,779</td></tr>
+<tr><td><b>Locker room, coatroom, and dressing room attendants</b><small>211 · SOC 39-3093</small></td><td>$36,300</td><td>$120</td><td><b>$2,176</b></td><td class="wide">$1,049</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Baggage porters and bellhops</b><small>301 · SOC 39-6011</small></td><td>$37,080</td><td>$120</td><td><b>$2,270</b></td><td class="wide">$1,094</td><td class="wide">$2,962</td></tr>
+<tr><td><b>Concierges</b><small>302 · SOC 39-6012</small></td><td>$38,950</td><td>$120</td><td><b>$2,494</b></td><td class="wide">$1,614</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Hotel, motel, and resort desk clerks</b><small>303 · SOC 43-4081</small></td><td>$35,070</td><td>$120</td><td><b>$2,028</b></td><td class="wide">$1,102</td><td class="wide">$2,839</td></tr>
+<tr><td><b>Maids and housekeeping cleaners</b><small>304 · SOC 37-2012</small></td><td>$35,510</td><td>$120</td><td><b>$2,081</b></td><td class="wide">$1,154</td><td class="wide">$2,901</td></tr>
+<tr><td><b>Home maintenance and repair workers</b><small>401 · SOC 49-9071</small></td><td>$49,590</td><td>$120</td><td><b>$2,922</b></td><td class="wide">$2,062</td><td class="wide">$4,068</td></tr>
+<tr><td><b>Home landscaping and groundskeeping workers</b><small>402 · SOC 37-3011</small></td><td>$39,150</td><td>$120</td><td><b>$2,518</b></td><td class="wide">$1,558</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Home electricians</b><small>403 · SOC 47-2111</small></td><td>$63,190</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,783</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Home plumbers</b><small>404 · SOC 47-2152</small></td><td>$63,800</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,813</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Home heating and air conditioning mechanics and installers</b><small>405 · SOC 49-9021</small></td><td>$61,010</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,626</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Home appliance installers and repairers</b><small>406 · SOC 49-9031</small></td><td>$50,990</td><td>$120</td><td><b>$2,950</b></td><td class="wide">$2,163</td><td class="wide">$4,416</td></tr>
+<tr><td><b>Home cleaning service workers</b><small>407 · SOC 37-2012</small></td><td>$35,510</td><td>$120</td><td><b>$2,081</b></td><td class="wide">$1,154</td><td class="wide">$2,901</td></tr>
+<tr><td><b>Locksmiths</b><small>408 · SOC 49-9094</small></td><td>$51,320</td><td>$120</td><td><b>$2,956</b></td><td class="wide">$2,084</td><td class="wide">$4,290</td></tr>
+<tr><td><b>Roadside assistance workers</b><small>409 · SOC 53-3032</small></td><td>$58,640</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,637</td><td class="wide">$4,288</td></tr>
+<tr><td><b>Personal care and service workers</b><small>501 · SOC 39-9099</small></td><td>$41,600</td><td>$120</td><td><b>$2,762</b></td><td class="wide">$1,138</td><td class="wide">$2,908</td></tr>
+<tr><td><b>Private event planners</b><small>502 · SOC 13-1121</small></td><td>$61,160</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,240</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Private event and portrait photographers</b><small>503 · SOC 27-4021</small></td><td>$44,660</td><td>$120</td><td><b>$2,823</b></td><td class="wide">$1,518</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Private event videographers</b><small>504 · SOC 27-4031</small></td><td>$74,990</td><td>$220</td><td><b>$3,849</b></td><td class="wide">$2,442</td><td class="wide">$5,768</td></tr>
+<tr><td><b>Event officiants</b><small>505 · SOC 21-2011</small></td><td>$60,810</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,363</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Pet and show animal caretakers</b><small>506 · SOC 39-2021</small></td><td>$35,360</td><td>$120</td><td><b>$2,063</b></td><td class="wide">$1,115</td><td class="wide">$2,931</td></tr>
+<tr><td><b>Tutors</b><small>507 · SOC 25-3041</small></td><td>$43,350</td><td>$120</td><td><b>$2,797</b></td><td class="wide">$1,352</td><td class="wide">$3,949</td></tr>
+<tr><td><b>Nannies and babysitters</b><small>508 · SOC 39-9011</small></td><td>$34,980</td><td>$120</td><td><b>$2,018</b></td><td class="wide">$816</td><td class="wide">$2,850</td></tr>
+<tr><td><b>Visual artists</b><small>509 · SOC 27-1013</small></td><td>$55,490</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$1,616</td><td class="wide">$5,948</td></tr>
+<tr><td><b>Floral designers</b><small>510 · SOC 27-1023</small></td><td>$37,360</td><td>$120</td><td><b>$2,303</b></td><td class="wide">$1,252</td><td class="wide">$2,950</td></tr>
+<tr><td><b>Skincare specialists</b><small>601 · SOC 39-5094</small></td><td>$45,330</td><td>$120</td><td><b>$2,837</b></td><td class="wide">$1,370</td><td class="wide">$4,555</td></tr>
+<tr><td><b>Massage therapists</b><small>602 · SOC 31-9011</small></td><td>$58,450</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$1,857</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Barbers, hairdressers, hairstylists, and cosmetologists</b><small>603 · SOC 39-5012</small></td><td>$35,790</td><td>$120</td><td><b>$2,115</b></td><td class="wide">$1,094</td><td class="wide">$3,469</td></tr>
+<tr><td><b>Shampooers</b><small>604 · SOC 39-5093</small></td><td>$32,600</td><td>$120</td><td><b>$1,732</b></td><td class="wide">$701</td><td class="wide">$2,409</td></tr>
+<tr><td><b>Manicurists and pedicurists</b><small>605 · SOC 39-5092</small></td><td>$35,760</td><td>$120</td><td><b>$2,111</b></td><td class="wide">$1,290</td><td class="wide">$2,933</td></tr>
+<tr><td><b>Eyebrow and eyelash technicians</b><small>606 · SOC 39-5012</small></td><td>$35,790</td><td>$120</td><td><b>$2,115</b></td><td class="wide">$1,094</td><td class="wide">$3,469</td></tr>
+<tr><td><b>Makeup artists</b><small>607 · SOC 39-5091</small></td><td>$97,150</td><td>$220</td><td><b>$5,500</b></td><td class="wide">$726</td><td class="wide">$6,000</td></tr>
+<tr><td><b>Exercise trainers and group fitness instructors</b><small>608 · SOC 39-9031</small></td><td>$47,160</td><td>$120</td><td><b>$2,873</b></td><td class="wide">$1,276</td><td class="wide">$4,660</td></tr>
+<tr><td><b>Tattoo artists and piercers</b><small>609 · SOC 27-1019</small></td><td>$71,240</td><td>$220</td><td><b>$3,474</b></td><td class="wide">$2,210</td><td class="wide">$5,797</td></tr>
+<tr><td><b>Tailors</b><small>610 · SOC 51-6052</small></td><td>$41,640</td><td>$120</td><td><b>$2,763</b></td><td class="wide">$1,410</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Shoe and leather workers and repairers</b><small>611 · SOC 51-6041</small></td><td>$37,800</td><td>$120</td><td><b>$2,356</b></td><td class="wide">$1,211</td><td class="wide">$2,981</td></tr>
+<tr><td><b>Golf caddies</b><small>701 · SOC 39-3091</small></td><td>$32,150</td><td>$120</td><td><b>$1,678</b></td><td class="wide">$625</td><td class="wide">$2,780</td></tr>
+<tr><td><b>Self-enrichment teachers</b><small>702 · SOC 25-3021</small></td><td>$46,800</td><td>$120</td><td><b>$2,866</b></td><td class="wide">$1,426</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Recreational and tour pilots</b><small>703 · SOC 53-2012</small></td><td>$123,220</td><td>$240</td><td><b>$5,528</b></td><td class="wide">$3,000</td><td class="wide">$8,000</td></tr>
+<tr><td><b>Sports and recreation instructors</b><small>706 · SOC 25-3021</small></td><td>$46,800</td><td>$120</td><td><b>$2,866</b></td><td class="wide">$1,426</td><td class="wide">$5,500</td></tr>
+<tr><td><b>Parking and valet attendants</b><small>801 · SOC 53-6021</small></td><td>$35,150</td><td>$120</td><td><b>$2,038</b></td><td class="wide">$1,094</td><td class="wide">$2,821</td></tr>
+<tr><td><b>Taxi and rideshare drivers and chauffeurs</b><small>802 · SOC 53-3054</small></td><td>$42,100</td><td>$120</td><td><b>$2,772</b></td><td class="wide">$1,978</td><td class="wide">$3,930</td></tr>
+<tr><td><b>Shuttle drivers</b><small>803 · SOC 53-3053</small></td><td>$37,290</td><td>$120</td><td><b>$2,295</b></td><td class="wide">$1,199</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Goods delivery people</b><small>804 · SOC 53-3031</small></td><td>$38,770</td><td>$120</td><td><b>$2,472</b></td><td class="wide">$649</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Personal vehicle and equipment cleaners</b><small>805 · SOC 53-7061</small></td><td>$35,830</td><td>$120</td><td><b>$2,120</b></td><td class="wide">$1,128</td><td class="wide">$2,882</td></tr>
+<tr><td><b>Private and charter bus drivers</b><small>806 · SOC 53-3052</small></td><td>$59,050</td><td>$120</td><td><b>$3,000</b></td><td class="wide">$2,624</td><td class="wide">$4,820</td></tr>
+<tr><td><b>Water taxi operators and charter boat workers</b><small>807 · SOC 53-5022</small></td><td>$47,520</td><td>$120</td><td><b>$2,880</b></td><td class="wide">$1,961</td><td class="wide">$4,803</td></tr>
+<tr><td><b>Rickshaw, pedicab, and carriage drivers</b><small>808 · SOC 53-6099</small></td><td>$45,650</td><td>$120</td><td><b>$2,843</b></td><td class="wide">$1,790</td><td class="wide">$4,304</td></tr>
+<tr><td><b>Home movers</b><small>809 · SOC 53-7062</small></td><td>$40,240</td><td>$120</td><td><b>$2,649</b></td><td class="wide">$1,572</td><td class="wide">$3,000</td></tr>
+<tr><td><b>Gas pump Attendant</b><small>810 · SOC 53-6031</small></td><td>$35,670</td><td>$120</td><td><b>$2,100</b></td><td class="wide">$1,256</td><td class="wide">$2,851</td></tr>
+</tbody></table></div>
+<p class="note">Not priced by BLS as annual pay (hourly only): Dancers (205), Musicians and singers (206), Disc jockeys, except radio (207), Entertainers and performers (208), Digital content creators (209), Tour guides (704), Travel guides (705).</p>
+<section class="prose"><h2>How this was worked out</h2><p>Pay: BLS Occupational Employment and Wage Statistics, May 2025, national, all industries (wages include tips). Each Treasury Tipped Occupation Code is matched to its related SOC code from the IRS list; where there are several, the one with the most jobs is used. Tax: 2026 federal rates and the $16,100 standard deduction (Rev. Proc. 2025-32), single filer, no other income, before credits. &quot;Per $1,000&quot; is the tax on the last $1,000 of taxable income. &quot;Most it can save&quot; assumes $25,000 of the pay (or all of it, if less) is qualified tips: it is the ceiling, not a typical figure. Social Security and Medicare tax (7.65%) and state income tax are not reduced by this deduction.</p>
+<p>The range across occupations: the most it can save a median earner runs from $1,564 to $5,528. A median bartender ($34,340) saves $120 per $1,000 and at most $1,941.</p>
+<p>Sources: <a href="https://www.irs.gov/tippedoccupations">IRS list of tipped occupations</a> (codes, related SOC codes) · <a href="https://www.bls.gov/oes/">BLS OEWS</a> (pay, via the BLS public API) · <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">Rev. Proc. 2025-32</a> (2026 rates) · <a href="https://www.law.cornell.edu/uscode/text/26/224">26 U.S.C. § 224</a> (the deduction). Machine-readable: <a href="/llms-full.txt">llms-full.txt</a>. Code: <a href="https://github.com/2016judea/tip-overtime-w2">github.com/2016judea/tip-overtime-w2</a>.</p></section>
+</div>
+<footer><div class="wrap">Tip &amp; Overtime Deductions, by Brick &amp; Mortar. We calculate and show the math; nothing is filed or stored. · <a href="/ai/">Use it in Claude or ChatGPT</a> · <a href="/privacy/">Privacy</a></div></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"What the no-tax-on-tips deduction is worth, by tipped occupation","description":"A median waiter (BLS pay $35,230) saves $120 of federal income tax for every $1,000 in tips. The most no tax on tips can save them in a year is $2,048, because that is all the income tax they owe. A waiter in the bottom tenth ($18,100) can save at most $200.","url":"https://tip-overtime-w2.vercel.app/no-tax-on-tips-by-occupation/","dateModified":"2026-11-19","temporalCoverage":"2026","creator":{"@type":"Organization","name":"Brick and Mortar AI LLC"},"license":"https://opensource.org/licenses/MIT","isBasedOn":["https://www.irs.gov/tippedoccupations","https://www.bls.gov/oes/","https://www.irs.gov/pub/irs-drop/rp-25-32.pdf"],"distribution":{"@type":"DataDownload","encodingFormat":"text/plain","contentUrl":"https://tip-overtime-w2.vercel.app/llms-full.txt"}}</script>
+<script src="/js/deduction.js"></script>
+<script>
+(function(){var D=window.W2Deduction,f=function(v){return Number(String(v||"").replace(/[$,\s]/g,""))||0};
+function go(){var pay=f(document.getElementById("pay").value),tips=f(document.getElementById("tips").value),st=document.getElementById("st").value,o=document.getElementById("out");
+if(!pay&&!tips){o.textContent="Type your pay and tips.";return;}
+var r=D.compute({tax_year:2026,filing_status:st,agi:pay,jobs:[{box12_tp:tips}]});
+if(st==="mfs"){o.textContent="Married filing separately: no deduction. Filing jointly is the only way to claim it.";return;}
+o.innerHTML="Deduction <b>"+D.usd(r.tips.deduction_cents)+"</b>. Federal income tax saved, about <b>"+(r.saved?D.usd(r.saved.cents):"$0.00")+"</b>.";
+try{if(!go.sent){go.sent=1;window.posthog&&posthog.capture("worth_tried",{status:st});}}catch(e){}}
+["pay","tips","st"].forEach(function(id){document.getElementById(id).addEventListener("input",go)});})();
+</script>
+</body></html>

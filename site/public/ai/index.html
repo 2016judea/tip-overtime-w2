@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/style.css"><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script><script defer src="/_vercel/insights/script.js"></script>
+<title>No tax on tips and overtime, in Claude or ChatGPT</title>
+<meta name="description" content="Add the Tip &amp; Overtime connector to Claude or ChatGPT and ask how much of your tips and overtime you can deduct. Worked out in code, every rule cited.">
+<link rel="canonical" href="https://tip-overtime-w2.vercel.app/ai/">
+<!-- bm-posthog:begin v2 — shared across every Vercel prototype; source ~/.claude/skills/site-analytics/posthog_snippet.html. ?me=1 opts this browser out on this site (?me=0 undoes); ?me=1&next=host1,host2 walks the opt-out across sites; headless (navigator.webdriver) never loads it. -->
+<script>
+(function(w,d){var S="tip-overtime-w2",K="bm_me",me=false,u,p,n;
+try{u=new URLSearchParams(location.search);p=u.get("me");n=u.get("next");}catch(e){}
+try{if(p==="1"){localStorage.setItem(K,"1");}else if(p==="0"){localStorage.removeItem(K);}}catch(e){}
+if(p==="1"){d.cookie=K+"=1; path=/; max-age=63072000; SameSite=Lax";}else if(p==="0"){d.cookie=K+"=; path=/; max-age=0; SameSite=Lax";}
+try{me=localStorage.getItem(K)==="1";}catch(e){}
+if(!me&&/(?:^|; )bm_me=1/.test(d.cookie))me=true;
+if(p==="1"&&n){var h=n.split(","),f=h.shift();if(/^[a-z0-9.-]+$/.test(f)&&(f.slice(-11)===".vercel.app"||f==="brickandmortar.dev"||f==="readglean.com")){location.replace("https://"+f+"/?me=1"+(h.length?"&next="+h.join(","):""));}}
+if(navigator.webdriver===true)return;
+!function(t,e){var o,n,p,r;e.__SV||(w.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify setPersonProperties reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing captureException getFeatureFlag isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(d,w.posthog||[]);
+posthog.init("phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only",persistence:"localStorage+cookie",opt_out_capturing_by_default:me});
+if(me){posthog.opt_out_capturing();}else{if(p==="0")posthog.opt_in_capturing();posthog.register({site:S});}
+})(window,document);
+</script>
+<!-- bm-posthog:end -->
+</head><body><div class="wrap">
+<header class="top"><a class="brand" href="/worksheet/">Tip &amp; Overtime Deductions</a><a class="small" href="/worksheet/">Use the worksheet</a></header>
+<section class="hero">
+<span class="due">Free · no account · nothing stored</span>
+<h1>Ask your AI how much of your tips and overtime you can deduct.</h1>
+<p class="lede">It works the numbers out in code, line by line on Schedule 1-A, cites the rule for each, and hands back a filled-in worksheet to print.</p>
+<div class="card"><h3>Connector URL</h3>
+<div class="row"><input id="u" readonly value="https://tip-overtime-w2.vercel.app/mcp" aria-label="Connector URL"><button class="btn primary" id="cp" type="button">Copy</button></div>
+<p class="note"><b>Claude:</b> Settings → Connectors → Add custom connector → paste the URL. No sign-in.<br><b>ChatGPT:</b> Settings → Apps → Advanced settings → Developer mode on → Create app → paste the URL, authentication: none.</p></div>
+</section>
+<section class="how">
+  <div><h3>Ask it</h3><p>"I'm a server, single, made $38,000. My W-2 says TP $14,200 and TT $640. What can I deduct?"</p></div>
+  <div><h3>Before your W-2</h3><p>"I worked about 120 hours of overtime at $18 an hour and made $9,000 in tips. Roughly what's my deduction?"</p></div>
+  <div><h3>For your staff</h3><p>Paste payroll rows (employee, week, hours, rate, tips, role) and get each person's W-2 box 12 TP, TT and box 14b.</p></div>
+</section>
+<section class="prose">
+<h2>The three tools</h2>
+<p><b>tip_overtime_deduction</b> — the tips and overtime deductions from W-2 boxes or pay stubs, every Schedule 1-A line, the Form 1040 line, the federal tax saved, and a worksheet link.<br>
+<b>w2_tip_overtime_boxes</b> — W-2 box 12 TP, TT and box 14b per employee from payroll rows, with each overtime week's regular rate.<br>
+<b>tipped_occupation_code</b> — whether a job is on the IRS list, its box 14b code, and what the deduction is worth at that job's median pay.</p>
+<p>It calculates and shows. It never files anything and stores nothing you send. <a href="/privacy/">Privacy</a> · <a href="/no-tax-on-tips-by-occupation/">What it's worth by occupation</a> · <a href="https://github.com/2016judea/tip-overtime-w2">Source</a></p>
+</section>
+</div>
+<footer><div class="wrap">Tip &amp; Overtime Deductions, by Brick &amp; Mortar.</div></footer>
+<script>document.getElementById("cp").addEventListener("click",function(){var u=document.getElementById("u");u.select();try{navigator.clipboard.writeText(u.value);}catch(e){document.execCommand("copy");}this.textContent="Copied";try{window.posthog&&posthog.capture("connector_url_copied");}catch(e){}});</script>
+</body></html>

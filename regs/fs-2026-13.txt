@@ -1,0 +1,621 @@
+Updates to questions and answers about the new
+deduction for qualified overtime compensation
+FS-2026-13, August 2026
+
+These FAQs supersede earlier FAQs that were posted in FS 2026-01 on Jan. 23, 2026.
+
+This Fact Sheet updates frequently asked questions for qualified overtime compensation
+(commonly referred to as No Tax on Overtime).
+
+The updates are as follows:
+   • Updates throughout, including adding an index, renumbering certain FAQs, and making
+       clarifying revisions to most questions.
+   • Deletes information that was applicable solely to the 2025 taxable year.
+   • Provides clarification on the limits and timing of the qualified overtime compensation
+       deduction.
+   • Provides additional information on coverage and exemptions under the FLSA.
+   • Provides detailed information on Form W-2, Form 1099-MISC, and Form 1099-NEC
+       requirements applicable to employers and payors of qualified overtime compensation.
+   • Adds information on federal income tax withholding procedures related to qualified
+       overtime compensation.
+   • Adds information on the requirement that qualified overtime compensation must be
+       separately reported on Form W-2 to claim the deduction.
+   • Provides more detailed information on issues applicable to federal employees.
+
+These FAQs are being issued to provide general information to taxpayers and tax professionals
+as expeditiously as possible. Accordingly, these FAQs may not address any particular taxpayer’s
+specific facts and circumstances, and they may be updated or modified upon further review.
+Because these FAQs have not been published in the Internal Revenue Bulletin, they will not be
+relied on or used by the IRS to resolve a case. Similarly, if an FAQ turns out to be an inaccurate
+statement of the law as applied to a particular taxpayer’s case, the law will control the taxpayer’s
+tax liability. Nonetheless, a taxpayer who reasonably and in good faith relies on these FAQs will
+not be subject to a penalty that provides a reasonable cause standard for relief, including a
+negligence penalty or other accuracy-related penalty, to the extent that reliance results in an
+underpayment of tax. Any later updates or modifications to these FAQs will be dated to enable
+taxpayers to confirm the date on which any changes to the FAQs were made. Additionally, prior
+versions of these FAQs will be maintained on IRS.gov to ensure that taxpayers, who may have
+relied on a prior version, can locate that version if they later need to do so.
+
+More information about reliance is available on IRS.gov. These FAQs were announced in IR-
+2026-88.
+
+
+Background
+
+The One, Big, Beautiful Bill Act (OBBBA), P.L. 119-21, added a new deduction for qualified
+overtime compensation. Notice 2025-69 clarified for individuals how to determine the amount of
+their deduction for qualified overtime compensation for the 2025 tax year.
+The income tax deduction for qualified overtime compensation is available to certain individuals
+who are paid overtime compensation under section 7 of the Fair Labor Standards Act (FLSA).
+
+Special rules apply to employees in the Federal Government who are covered by FLSA
+regulations issued by the Office of Personnel Management. For more information see Federal
+employee issues.
+
+These FAQs were coordinated with the Department of Labor and the Office of Personnel
+Management.
+
+Below are answers to some questions about the deduction for qualified overtime compensation.
+
+    •   Topic A: The basics
+    •   Topic B: FLSA overtime-eligibility
+    •   Topic C: Reporting qualified overtime compensation on Form W-2 and Form 1099-NEC or 1099-
+        MISC
+    •   Topic D: Federal income tax withholding from wages
+    •   Topic E: Information for employers
+    •   Topic F: Information for employees
+    •   Topic G: Federal employee issues
+    •   Topic H: Other questions and resources
+
+Topic A: The basics
+Q1. What is the deduction for qualified overtime compensation? (updated August 6, 2026)
+
+A1. The deduction for qualified overtime compensation is an income tax deduction available to
+certain individuals who are paid qualified overtime compensation required under section 7 of the
+Fair Labor Standards Act (FLSA) (29 USC § 207). It is available whether the individual itemizes or
+takes the standard deduction. Overtime compensation not required by the FLSA is not eligible for
+the deduction.
+
+The deduction for qualified overtime compensation does not mean that overtime compensation is
+excluded or exempt from gross income. Generally, overtime compensation is not excludible or
+exempted from wages for purposes of employment taxes including income tax withholding, social
+security, and federal unemployment taxes.
+
+Q2. What is the deduction amount? Are there limits to the deduction? (updated August 6, 2026)
+
+A2. The deduction is up to $12,500 of qualified overtime compensation earned for the year per
+individual tax return ($25,000 in the case of a joint return). The deduction is reduced if a
+taxpayer’s modified adjusted gross income (MAGI) for the tax year exceeds $150,000 ($300,000
+for joint filers). For more information see the instructions to Form 1040 (Schedule 1-A).
+
+Q3. When is qualified overtime compensation paid for purposes of the deduction? (added
+August 6, 2026)
+
+A3. Generally, the same principles that govern when a payment is treated as wages for purposes
+of income tax withholding apply to determine when qualified overtime compensation is paid by the
+employer to the employee.
+Topic B: FLSA overtime-eligibility
+Q4. Who is an FLSA overtime-eligible employee? (updated August 6, 2026)
+
+A4. For overtime to be required under the FLSA, it must, among other requirements, be paid to an
+individual who is both covered by the FLSA and not exempt from the FLSA’s overtime requirement (an
+FLSA overtime-eligible employee). An individual who is ineligible for overtime under the FLSA (an FLSA
+overtime-ineligible employee) does not receive qualified overtime compensation regardless of other laws
+or circumstances (such as a collective bargaining agreement) providing for overtime pay.
+
+The FLSA covers all employees of certain enterprises having workers engaged in interstate commerce,
+producing goods for interstate commerce, or handling, selling, or otherwise working on goods or materials
+that have been moved in or produced for such commerce by any person. In addition, employees are
+individually covered when engaged in interstate commerce or in the production of goods for interstate
+commerce, or in any closely-related process or occupation directly essential to such production. See Fact
+Sheet #14: Coverage Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor.
+
+The FLSA contains some exemptions; some apply to specific types of businesses and others apply to
+specific kinds of work. Because the exemptions are specifically defined under the FLSA, an employer
+should carefully check the exact terms and conditions for each exemption before applying them.
+
+Employees who are exempt from the FLSA’s overtime requirements are FLSA overtime-ineligible. Some
+common exemptions under the FLSA that apply to overtime requirements include but are not limited to:
+          • Executive, administrative, and professional employees (including teachers and academic
+              administrative personnel in elementary and secondary schools). See Fact Sheet #17A:
+              Exemption for Executive, Administrative, Professional, Computer & Outside Sales
+              Employees Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor.
+          • Outside sales employees. See Fact Sheet #17F: Exemption for Outside Sales
+              Employees Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor.
+          • Employees in certain computer-related occupations. See Fact Sheet #17E: Exemption for
+              Employees in Computer-Related Occupations Under the Fair Labor Standards Act
+              (FLSA) | U.S. Department of Labor.
+          • Certain commissioned employees of retail or service establishments. See Fact Sheet
+              #20: Employees Paid Commissions By Retail Establishments Who Are Exempt Under
+              Section 7(i) From Overtime Under The FLSA | U.S. Department of Labor.
+          • Employees of railroads and air carriers, taxi drivers, certain employees of motor carriers,
+              seamen on American vessels, and local delivery employees paid on approved trip rate
+              plans. See Fact Sheet #19: The Motor Carrier Exemption under the Fair Labor Standards
+              Act (FLSA) | U.S. Department of Labor.
+          • Employees of certain seasonal amusement or recreational establishments. See Fact
+              Sheet #18: Section 13(a)(3) Exemption for Seasonal Amusement or Recreational
+              Establishments Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor.
+          • Certain agricultural employees performing certain duties each workweek. See Fact Sheet
+              #12: Agricultural Employment Under the Fair Labor Standards Act (FLSA) | U.S.
+              Department of Labor.
+
+More information on coverage and exemptions, including exemptions from minimum wage and overtime
+pay requirements and exemptions from overtime pay only, under the FLSA can be found on the
+Department of Labor website. See “Exemptions” in the Handy Reference Guide to the Fair Labor
+Standards Act.
+Q5. Is an employee-owner of a business an FLSA overtime-eligible employee? (added August 6,
+2026)
+
+A5. Generally, no. An employee who owns at least a bona fide 20-percent equity interest in the enterprise
+in which they are employed, regardless of the type of business organization (e.g., corporation,
+partnership, or other), and who is actively engaged in its management, is considered a bona fide
+executive exempt from 29 USC § 207’s overtime requirement and is thus an FLSA overtime-ineligible
+employee. An employee who owns a smaller interest might still qualify for one of the other exemptions
+discussed in Question 4.
+
+For more information see Fact Sheet #17B: Exemption for Executive Employees Under the Fair Labor
+Standards Act (FLSA) | U.S. Department of Labor.
+
+
+Topic C: Reporting qualified overtime compensation on Form W-2 and
+Form 1099-NEC or 1099-MISC
+Q6. Is qualified overtime compensation required to be separately reported to individuals on
+information returns? (updated August 6, 2026)
+
+Yes. Starting in tax year 2026, payors and employers are required to separately report qualified overtime
+compensation on Form 1099-MISC (box 14), Form 1099-NEC (box 1d), or, more commonly, Form W-2
+(box 12, code TT).
+
+Q7. Under what circumstances is qualified overtime compensation reported on Form 1099-MISC
+or NEC instead of a Form W-2? (added August 6, 2026)
+
+The only circumstance where a payor would report qualified overtime compensation on a Form 1099-
+MISC or Form 1099-NEC instead of a Form W-2 is when the worker is an employee of the employer for
+FLSA purposes but treated as an independent contractor for purposes of the Internal Revenue Code.
+
+For information regarding DOL’s analysis for determining whether a worker is an employee or
+independent contractor for FLSA purposes, see Fact Sheet 13: Employment Relationship Under the Fair
+Labor Standards Act (FLSA) | U.S. Department of Labor. For information regarding IRS’s analysis of
+worker classification for Internal Revenue Code purposes, see Independent contractor (self-employed) or
+employee? | Internal Revenue Service.
+
+Circumstances when qualified overtime compensation is properly reported on Form 1099-MISC or NEC
+are rare. The FAQs below assume Form W-2 reporting to an FLSA overtime-eligible employee, but similar
+principles in the FAQs below apply to Form 1099 series information reporting to FLSA overtime-eligible
+individuals.
+
+Topic D: Federal income tax withholding from wages
+Q8. Must employers reduce wages subject to income tax withholding to account for the qualified
+overtime compensation deduction? (added August 6, 2026)
+
+A8. No. Overtime compensation (including qualified overtime compensation) is subject to federal income
+tax withholding. An employer may not reduce withholding on wages to account for the qualified overtime
+deduction unless the employee furnishes the employer an updated and valid Form W-4 accounting for the
+employee’s expected deduction for qualified overtime compensation.
+Q9. How can an employee reduce the amount of income tax withheld from the employee’s pay
+with respect to an expected deduction for qualified overtime compensation? (added August 6,
+2026)
+
+A9. An employee may furnish the employer with a new Form W-4 that estimates the employee’s expected
+deduction for qualified overtime compensation.
+
+The 2026 Form W-4 was updated to allow employees to account for the deduction for qualified overtime
+compensation in step 4(b). For more information, see the step 4(b) deduction worksheet.
+
+Employees may also consider using the Tax Withholding Estimator, which has been updated to allow
+employees to account for the deduction for qualified overtime compensation.
+
+Topic E: Information for employers
+Q10. Must an employer separately include the amount of qualified overtime compensation on a
+Form W-2 for tax year 2026? (updated August 6, 2026)
+
+A10. Yes, an employer must report the amount of qualified overtime compensation paid to an employee
+beginning in 2026, on Form W-2 in box 12, using code TT.
+
+Qualified overtime compensation is the amount of overtime compensation required under 29 USC § 207
+that is in excess of the employee’s regular rate. Thus, the amount that must be reported on Form W-2,
+box 12, code TT is the total qualified overtime compensation paid, which, due to other limitations, may not
+be the amount ultimately deductible by the employee.
+
+Example: Employer paid Employee qualified overtime compensation of $30,000 in 2026. Employer must
+include $30,000 on Employee’s Form W-2 using box 12, code TT even though the overall limit on the
+deduction for qualified overtime compensation is $12,500 ($25,000 in the case of a joint return).
+
+Q11. Must an employer correct a Form W-2 if it discovers an error made in Form W-2, box 12, code
+TT? (added August 6, 2026)
+
+A11. Yes. If an employer discovers an error on Form W-2, box 12, code TT, the employer must file Form
+W-2c, Corrected Wage and Tax Statements (Corrected Wage and Tax Statement) with SSA and furnish
+Form W-2c to the employee as soon as possible. An employer that files or furnishes an incorrect Form W-
+2 may be subject to information reporting penalties under section 6721 or 6722, including reduced
+penalties for timely corrections.
+
+Q12. How does an employer determine the amount of qualified overtime compensation the
+employer paid to an employee for purposes of the deduction? (added August 6, 2026)
+
+A12. Generally, qualified overtime compensation is determined each workweek. Consistent with guidance
+provided for tax year 2025, for most employees, qualified overtime compensation paid to an FLSA
+overtime-eligible employee for the workweek is determined as follows:
+        Number of FLSA hours worked in excess of 40 hours in a workweek x
+        One-half x
+        Employee’s FLSA regular rate of pay =
+        Qualified overtime compensation for workweek
+For an employer relying on certain creditable overtime premiums to meet the FLSA overtime requirement,
+this formula equals the amount of the portion of the overtime premiums credited (and only that portion)
+plus any additional FLSA overtime premium paid. For purposes of the deduction, see the following FAQs
+for information on determining the FLSA workweek, calculating FLSA hours worked, and determining an
+employee’s FLSA regular rate of pay.
+
+For general information on overtime requirements under the FLSA, see Fact Sheet #23: Overtime Pay
+Requirements of the FLSA | U.S. Department of Labor.
+
+If an employer computes FLSA overtime using an alternative method of computation within 29 USC § 207
+(rather than the general method set forth in 29 USC § 207(a)), see FAQ 17.
+
+Different rules may apply for federal employees covered by OPM’s FLSA regulations. See Federal
+employee issues for more information.
+
+Q13. What is a workweek for purposes of determining the deduction for qualified overtime
+compensation? (added August 6, 2026)
+
+A13. A workweek is a fixed and regularly recurring period of 168 hours—7 consecutive 24-hour periods. It
+may begin on any day of the week and at any hour of the day established by the employer. Generally,
+each workweek stands alone; for purposes of overtime there can be no averaging of hours over 2 or more
+workweeks. See Overtime Pay | U.S. Department of Labor.
+Different rules may apply for federal employees. See Federal employee issues for more information.
+
+Q14. What are FLSA hours worked for purposes of determining the deduction for qualified
+overtime compensation? (added August 6, 2026)
+
+A14. Under the FLSA, employees must receive at least the minimum wage and, in general, may not be
+employed for more than 40 hours in a workweek without receiving at least one and one-half times their
+regular rates of pay for the overtime hours. The regular rate and the amount employees should receive
+cannot be determined without knowing the number of hours worked in a particular workweek.
+
+For more information about what time qualifies as “hours worked” under the FLSA, please see Fact Sheet
+#22: Hours Worked Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor.
+Different rules may apply for federal employees. See Federal employee issues for more information.
+
+Q15. What is the FLSA regular rate for purposes of determining the deduction for qualified
+overtime compensation? (added August 6, 2026)
+
+A15. Under the FLSA, an employee’s regular rate includes “all remuneration for employment paid to, or
+on behalf of, the employee.” 29 USC § 207(e). The “regular rate” includes all remuneration for
+employment—whether determined on a piece-rate, salary, commission, or some other basis—except
+certain payments excluded by the FLSA. The regular rate is calculated by dividing the total pay for
+employment (except for the statutory exclusions) in any workweek by the total number of FLSA hours
+actually worked.
+
+For more information, see Fact Sheet #56A: Overview of the Regular Rate of Pay Under the Fair Labor
+Standards Act (FLSA) | U.S. Department of Labor.
+
+Different rules may apply for federal employees. See Federal employee issues for more information.
+Q16. If an FLSA overtime-eligible employee is paid overtime compensation not required by the
+FLSA, what portion of overtime pay is qualified overtime compensation? (updated August 6, 2026)
+
+A16. Some employers may provide overtime pay that is not required by 29 USC § 207 on their own
+initiative, pursuant to a State law, or under a collective bargaining agreement with a labor union. For
+example, while the FLSA generally requires overtime pay at one and one-half times an individual’s
+regular rate of pay for hours in excess of 40 in a workweek, an employer may pay more than the amount
+actually required under the FLSA by providing a non-FLSA overtime premium for different hours (e.g., for
+hours beyond 8 on a workday, for hours beyond 35 in a workweek, for hours on a weekend or holiday,
+etc.) or apply a non-FLSA overtime premium to a different rate (e.g., a percentage of the employee’s base
+hourly rate). In such cases, the employer must evaluate the payments in accordance with the FLSA’s
+principles at 29 USC § 207, particularly subsections (e) and (h), to determine the amount required under
+the FLSA. If an employer pays more overtime pay than required by the FLSA (e.g., “double time” pay that
+is twice the employee’s regular rate of pay), only the amount minimally necessary to satisfy 29 USC § 207
+is qualified overtime compensation for purposes of the tax deduction.
+
+Example: Individual A is an FLSA overtime-eligible employee, and 29 USC § 207(a) applies to Individual
+A’s employer with respect to Individual A’s employment. Individual A worked 50 hours during a workweek
+at an hourly rate of $20 per hour with no other remuneration such that the regular rate is $20 per hour for
+that workweek. Individual A’s employer pays overtime at two times the employee’s regular rate. This is in
+excess of the amount required by the FLSA. The employer paid Individual A $400 for overtime worked
+($20 per hour x 10 overtime hours = $200 in straight time compensation, plus $20 per hour premium x 10
+overtime hours = $200 in overtime compensation). Because only $300 was required to be paid under 29
+USC § 207(a) for the 10 overtime hours ($20 per hour x 10 overtime hours = $200 in straight time
+compensation, plus $10 per hour overtime premium x 10 overtime hours = $100 in overtime
+compensation), the qualified overtime compensation for purposes of the tax deduction is $100, which is
+the premium amount required under 29 USC § 207 or, in other words, the “half” amount in the required
+one and one-half times.
+
+Q17. If an employer computes and pays overtime under the FLSA in accordance with an
+alternative method of computation within 29 USC § 207 (rather than the general method set forth
+in 29 USC § 207(a)), how is qualified overtime compensation determined for purposes of the tax
+deduction? (added August 6, 2026)
+
+A17. FLSA overtime-eligible employees whose overtime is determined by a provision in 29 USC § 207
+other than 29 USC § 207(a) are paid qualified overtime compensation when compensation determined by
+that provision exceeds the regular rate. The overtime premium actually paid in compliance with that
+provision, rather than a calculation of the amount that otherwise would have been paid under 29 USC §
+207(a), is used to determine the qualified overtime compensation for purposes of the tax deduction.
+Employees to whom provisions of 29 USC § 207 other than 29 USC § 207(a) may apply include, but are
+not limited to:
+              • Employees of hospitals or certain residential care facilities (for more information see Fact
+                 Sheet #54 – The Health Care Industry and Calculating Overtime Pay | U.S. Department
+                 of Labor),
+              • Public sector employees in fire protection and law enforcement paid on a workweek basis
+                 (for more information see Fact Sheet #8: Law Enforcement and Fire Protection
+                 Employees Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor), and
+              • Employees of a political subdivision of a State or an interstate governmental agency who
+                 receive compensatory time off in certain circumstances in lieu of cash overtime
+                 compensation (for more information see Fact Sheet #7: State and Local Governments
+                 Under the Fair Labor Standards Act (FLSA) | U.S. Department of Labor).
+Q18. If an employee of a state or local government agency receives compensatory time off in lieu
+of cash overtime compensation in accordance with 29 USC § 207(o), when is qualified overtime
+compensation paid to the employee for purposes of the tax deduction? (added August 6, 2026)
+
+A18. Generally, the same principles that govern payment for purposes of determining wages subject to
+income tax withholding apply to determine when qualified overtime compensation is paid by the employer
+to the employee. Thus, for purposes of the deduction, qualified overtime compensation for employees
+who receive compensatory time off in accordance with 29 USC § 207(o) is paid when the employee is
+paid wages for accrued compensatory time taken during the course of employment (e.g., a day off) or is
+paid out accrued compensatory time upon termination of employment. Qualified overtime compensation
+is not paid when the employee earns the compensatory time off in accordance with 29 USC § 207(o).
+(Note: Section 207(o) does not apply to private employees or Federal employees. See Federal employee
+issues.)
+
+For purposes of the deduction, the amount of qualified overtime compensation paid for compensatory
+time earned in accordance with 29 USC § 207(o) is determined by the sum of (as applicable):
+           • Hours of accrued compensatory time off earned in accordance with 29 USC § 207(o) that
+                is taken or used (e.g., a day off) during the course of employment and paid as wages
+                multiplied by the rate(s) applicable to those hours determined under 29 USC §
+                207(o)(3)(B), divided by three.
+           • Hours of accrued compensatory time off earned in accordance with 29 USC § 207(o) that
+                is paid out (or cashed out) as wages upon termination of employment, multiplied by the
+                rate applicable to those hours determined under 29 USC § 207(o)(4), divided by three.
+
+Example: Individual A is an FLSA overtime-eligible employee who works for a State or local government
+agency. The employer gives compensatory time at a rate of one and one-half hours for each overtime
+hour worked under 29 USC 207(o). In 2025, Individual A worked overtime hours that were accrued as
+compensatory time off in accordance with section 207(o). In 2026, Individual A used the accrued
+compensatory time to take the day off, which the employer paid as wages in 2026 in accordance with the
+employee’s regular pay schedule. For purposes of determining the amount of qualified overtime
+compensation paid for the day off in 2026, the employer must determine the hours of accrued
+compensatory time off used and paid as wages, multiply those hours by the applicable rate in 29 USC §
+207(o)(3)(B), and divide by three.
+
+Example: Individual B is an FLSA overtime-eligible employee who works for a State or local government
+agency. The employer gives compensatory time at a rate of one and one-half hours for each overtime
+hour worked under 29 USC 207(o). In 2026, Individual B terminated employment with Individual B’s
+employer and was paid for unused compensatory time accrued under 29 USC §207(o). For purposes of
+determining the amount of qualified overtime compensation paid in 2026, the employer must determine
+the hours of unused compensatory time off cashed out and paid as wages, multiply those hours by the
+applicable rate in 29 USC § 207(o)(4), and divide by three.
+
+Topic F: Information for employees
+Q19. If an employee received a Form W-2, Wage and Tax Statement with qualified overtime
+compensation reported in box 12, code TT, how does the employee report the amount of qualified
+overtime compensation on the employee’s individual income tax return for tax years 2026-2028?
+(added August 6, 2026)
+
+A19. The amount of qualified overtime compensation reported on Form W-2, box 12, code TT is the
+amount of overtime compensation that is required by the FLSA that is in excess of the regular rate and is
+not necessarily fully deductible. The Schedule 1-A (Form 1040) or successor and its instructions compute
+the deductible amount of qualified overtime compensation. Schedule 1-A (Form 1040) or successor first
+requires taxpayers to report the full amount of qualified overtime compensation on Form W-2 box 12,
+code TT and then takes into account relevant deduction limits such as the overall limit of $12,500 of
+qualified overtime compensation earned for the year per individual tax return ($25,000 in the case of a
+joint return) and any reduction applicable if the taxpayer’s modified adjusted gross income (MAGI)
+exceeds $150,000 ($300,000 for joint filers). The amount reported on the last line of Part III of Schedule
+1-A (Form 1040) is the deductible amount of qualified overtime compensation.
+
+Example: Employer paid Individual A qualified overtime compensation of $10,000 in 2026. Employer
+reported qualified overtime compensation of $10,000 on Form W-2 in box 12 using code TT. Individual A
+should include the full $10,000 of qualified overtime compensation on Part III Schedule 1-A (Form 1040).
+Individual A should then complete the rest of Part III of Schedule 1-A (Form 1040) to determine Individual
+A’s deduction for qualified overtime compensation.
+
+Q20. Can an employee deduct qualified overtime compensation that is not separately reported on
+the employee’s Form W-2? (added August 6, 2026)
+
+A20. Under section 225(a) of the Internal Revenue Code, an employee can only deduct qualified overtime
+compensation that the employee’s employer included on a properly furnished Form W-2. For tax year
+2025, Notice 2025-69 provided relief from that requirement, meaning employees might not see an entry
+for qualified overtime compensation on their Form W-2 for 2025 even though they earned qualified
+overtime compensation. However, no relief is available for tax years after 2025. Consequently, for tax
+years after 2025, employees may not consider any amount of qualified overtime compensation in excess
+of what is reported on Form(s) W-2, box 12, code TT in determining their deduction.
+
+Q21. If the employer overstated the amount on Form W-2, box 12, code TT, may the entire amount
+reported on Form W-2, box 12, code TT be considered in determining the deductible amount?
+(added August 6, 2026)
+
+A21. No, the employee is only entitled to consider the amount of qualified overtime compensation paid
+during the taxable year in determining the deductible amount. If the amount reported on Form W-2, box
+12, code TT is overstated, the employee may only consider the actual amount of qualified overtime
+compensation paid to the employee by the employer.
+
+Example: Employer paid Individual A qualified overtime compensation of $5,000 in 2026. However,
+Employer erroneously reported $10,000 of qualified overtime compensation on Individual A’s Form W-2 in
+box 12, code TT. Individual A may not include more than $5,000 on Schedule 1-A in determining
+Individual A’s deduction for 2026.
+
+Q22. If an employee reasonably believes that the employer omitted or understated the amount of
+qualified overtime compensation on the employee’s Form W-2, box 12, code TT, what can the
+employee do to consider the omitted or understated amount of qualified overtime compensation
+for purposes of determining the deduction? (added August 6, 2026)
+
+A22. The employee must request from the employer a Form W-2c (Corrected Wage and Tax Statement)
+that properly reports the qualified overtime compensation using box 12, code TT in order to determine the
+employee’s deduction for qualified overtime.
+
+Section 225(a) requires qualified overtime to be separately reported on the employee’s Form W-2 for
+qualified overtime compensation to be deductible by the employee. Thus, any amount not reported on
+Form(s) W-2, box 12, code TT may not be considered for purposes of the deduction. Consequently, if the
+employer is unwilling or unable to provide the employee with a Form W-2c to correct an omitted or
+understated amount of qualified overtime compensation, the employee is not entitled to use the omitted or
+understated amount of qualified overtime compensation to determine the employee’s deduction even if
+the employee was paid qualified overtime compensation in excess of the amount reported on Form W-2,
+box 12, code TT by the employer.
+
+Example: Employer paid Individual A qualified overtime compensation of $10,000 in 2026. However,
+Employer only reported $5,000 of qualified overtime compensation on Individual A’s Form W-2 in box 12,
+code TT. Individual A informed the individual’s Employer of the error, and Employer furnished Individual A
+with a Form W-2c correcting the error and properly reporting qualified overtime compensation of $10,000.
+Upon being furnished the Form W-2c with the corrected entry, Individual A may include $10,000 of
+qualified overtime compensation on Schedule 1-A (Form 1040) in determining Individual A’s deduction in
+2026.
+
+Example: Employer paid Individual B qualified overtime compensation of $10,000 in 2026. However,
+Employer only reported $5,000 of qualified overtime compensation on Individual B’s Form W-2 in box 12,
+code TT. Individual B informed Employer of the error, and Employer was unwilling or unable to furnish
+Individual B with a Form W-2c correcting the entry in box 12, code TT. Based on the requirement under
+section 225(a) that qualified overtime compensation be separately stated on Form W-2 in box 12, code
+TT, Individual B may only include $5,000 of qualified overtime compensation on Schedule 1-A (Form
+1040) in determining Individual B’s deduction in 2026.
+
+Q23. If the employer is unwilling or unable to provide the employee with a Form W-2c correcting
+the amount of qualified overtime compensation the employee was paid, can the employee use a
+substitute Form W-2 (Form 4852) in order to be able to determine the deduction for qualified
+overtime compensation on Schedule 1-A (Form 1040)? (added August 6, 2026)
+
+A23. No. Section 225(a) allows as a deduction an amount equal to the qualified overtime compensation
+received during the taxable year and included on statements furnished pursuant to section 6051(a)(19)
+(which in this case would be the Form W-2). Form 4852 does not satisfy the requirement under section
+225(a) because it is not furnished pursuant to section 6051(a)(19). Thus, any amount of qualified
+overtime compensation reported on Form 4852 cannot be used to determine the deductible amount of
+qualified overtime compensation.
+
+Q24. If an employee does not have a social security number valid for employment but received
+qualified overtime compensation reported on Form W-2 using box 12, code TT, may the employee
+use the amount of qualified overtime compensation in determining the deduction? (updated
+August 6, 2026)
+
+A24. No. To claim a deduction for qualified overtime compensation under section 225(d), the employee
+who received qualified overtime compensation must have a valid social security number. A valid social
+security number for purposes of the deduction is one that is valid for employment and that is issued by
+the SSA before the due date of the employee’s individual income tax return (including extensions).
+
+Q25. If an employee is married, must the employee file jointly with the employee’s spouse to claim
+the deduction? (updated August 6, 2026)
+
+A25. Yes, if the employee is married (within the meaning of section 7703), the employee and the
+employee’s spouse must file a joint return to claim the deduction. If both spouses receive qualified
+overtime compensation, both spouses must have a valid social security number and must include both
+social security numbers on the tax return claiming the deduction. For more information, see FAQ 24
+above.
+Topic G: Federal employee issues
+Q26. How does a federal employee know whether the employee is FLSA overtime-eligible?
+(updated August 6, 2026)
+
+A26. FLSA eligibility for federal employees is typically documented on the employee’s Standard Form 50,
+Notification of Personnel Action; see block 35, “FLSA Category”; “E” means exempt or FLSA-ineligible
+and “N” means nonexempt or FLSA overtime-eligible. Under 29 USC 204(f), the Office of Personnel
+Management (OPM) administers the FLSA for most federal employees. See OPM FLSA regulations and
+OPM FLSA fact sheet.
+
+Although OPM administers the FLSA for most federal employees, there are some exceptions. For
+example, DOL’s FLSA regulations and guidance cover employees of the Library of Congress, United
+States Postal Service, the Postal Regulatory Commission, and Tennessee Valley Authority. See 29 USC
+204(f). Additionally, the Office of Congressional Workplace Rights regulates the FLSA for legislative
+branch employees generally. See OCWR Rules and Regulations - Fair Labor Standards Act for more
+information. Questions 27-30 below deal with federal employees covered by OPM’s FLSA regulations.
+
+Q27. Is compensatory time off for FLSA overtime-eligible federal employees authorized under 5
+USC § 5543 considered qualified overtime compensation? (added August 6, 2026)
+
+A27. Qualified overtime compensation does not include the value of compensatory hours earned or used
+by employees during the course of employment with an agency. However, a portion of the payment for
+the unused 5 USC § 5543 compensatory time off hour—at the end of the 26-pay-period timeframe for
+using compensatory time off, transfer to a different Federal agency, or separation from Federal service—
+is qualified overtime compensation. As provided in 5 CFR 551.531(g), the dollar value of compensatory
+time off when it is liquidated is the amount of overtime pay the employee otherwise would have received
+for the hours of the pay period during which compensatory time off was earned by performing overtime
+work. One half of the employee’s “hourly regular rate of pay” as calculated under 5 CFR 551.511 times all
+overtime hours worked for which the employee received compensatory time off that is being liquidated
+would be considered qualified overtime compensation. (See 5 CFR 551.512 regarding computation of
+FLSA overtime pay.)
+
+Q28. What are hours worked for purposes of determining the deduction for qualified overtime
+compensation for federal employees? (added August 6, 2026)
+
+A28. For FLSA overtime-eligible federal employees, the counting of time as hours of work for the purpose
+of deriving the number of FLSA overtime hours is determined under OPM regulations (5 CFR part 551,
+subpart D). Overtime hours are derived after comparing hours of work to the applicable FLSA overtime
+threshold. (For most employees, there is an 8-hour daily overtime threshold and a 40-hour weekly
+overtime threshold.) In general, time spent by an employee performing an activity for the benefit of an
+agency and under the control or direction of an agency is hours of work. This includes time during which
+an employee is required to work or suffered or permitted to work, except that, for employees with a
+flexible work schedule, hours of work are limited to hours that are officially ordered in advance and do not
+include credit hours. Also, hours for periods of paid nonduty status (such as paid leave, paid holiday time
+off, and use of compensatory time off) are treated as hours of work for purposes of applying OPM’s FLSA
+regulations to covered federal employees. Hours when compensatory time off is earned are not
+considered hours of work for FLSA purposes (see 5 USC 5543 and FAQ 27).
+
+Q29. What is a work period for purposes of determining the deduction for qualified overtime
+compensation for federal employees? (added August 6, 2026)
+A29. An FLSA overtime-eligible federal employee’s FLSA overtime hours and pay are determined based
+on the applicable work period. For most employees, the work period is the employee’s “regularly
+scheduled administrative workweek,” which is a fixed and recurring period of 168 hours—seven
+consecutive 24-hour periods. It need not coincide with the calendar week but may begin on any day and
+at any hour of a day. Certain categories of federal employees have special FLSA work periods. For
+example, the default work period for GS-0081 firefighters covered by 5 U.S.C. 5545b is their biweekly pay
+period, and the FLSA biweekly overtime threshold is 106 hours.
+
+Q30. How is the regular rate computed for purposes of determining the deduction for qualified
+overtime compensation for federal employees? (added August 6, 2026)
+
+A30. For FLSA overtime-eligible federal employees whose FLSA overtime pay is computed on a
+workweek basis, the hourly regular rate is computed by dividing the total remuneration paid to an
+employee in the workweek by the number of hours in the workweek for which such compensation is paid.
+
+The total remuneration includes all remuneration for employment except the following:
+        (1) Payments as rewards for service the amount of which is not measured by or dependent on
+hours of work, production, or efficiency (e.g., a cash award for a suggestion made by an employee and
+adopted by an agency);
+        (2) Reimbursements for travel expenses, or other similar expenses, incurred by an employee in
+furtherance of an agency's interest, which are not related to hours of work;
+        (3) Payments made in recognition of services performed during a given period, if both the fact
+that payment is to be made and the amount of the payment are determined at the sole discretion of the
+agency (i.e., discretionary cash awards or bonuses);
+        (4) Contributions by an agency to a fund for retirement, insurance, or similar benefits;
+        (5) Extra compensation provided by a premium rate paid for hours of work performed by an
+employee in excess of eight in a day, or in excess of the normal workweek applicable to the employee;
+        (6) Extra compensation provided by a premium rate paid for hours of work performed by an
+employee on a Sunday or a holiday where such premium rate is at least one and one-half times the
+employee's rate of pay for work performed in nonovertime hours on other days; or
+        (7) Extra compensation provided by a premium rate paid for hours of work performed by an
+employee outside his or her regular working hours, where such premium rate is at least one and one-half
+times the employee's rate of pay for work performed in nonovertime hours.
+
+Under OPM’s FLSA regulations (5 CFR 551.512), an employee’s FLSA overtime pay entitlement is the
+sum of—
+         (1) the straight-time rate of pay times all overtime hours worked, where the straight-time rate is
+generally equal to the employee’s rate of pay for his or her position (excluding any premiums,
+differentials, or cash awards or bonuses)—normally, the employee’s hourly base rate plus the hourly
+value of a locality payment or special rate supplement; and
+         (2) one-half times the employee’s hourly regular rate of pay times all overtime hours worked.
+For an example of an FLSA overtime pay calculation, see OPM’s How to Compute FLSA Overtime Pay
+fact sheet. Employees should consult with their agency’s HR or payroll office if they have questions about
+FLSA overtime pay computations.
+
+The one-half portion (paragraph (2) of the above formula) is the qualified overtime compensation used in
+determining an employee’s qualified overtime compensation deduction.
+
+Topic H: Other questions and resources
+Q31. Are residents of a U.S. territory eligible to claim a deduction for qualified overtime
+compensation with the IRS? (added August 6, 2026)
+A31. Residents of U.S. territories who file a U.S. Form 1040 or Form 1040-NR may be eligible for the
+deduction, but the amount may be reduced or disallowed depending on the resident’s modified adjusted
+gross income and territory-sourced excluded income. The deduction for qualified overtime compensation
+may be claimed only with respect to income that is included in the resident’s U.S. gross income.
+
+Accordingly, a resident of a U.S. territory may not claim this deduction on a U.S. tax return if the entirety
+of their overtime compensation is excluded from their U.S. gross income.
+For more information, see Publication 570.
+
+Q32. Where can I get more information on the FLSA and overtime pay in general? (updated
+August 6, 2026)
+
+A32. More information on the FLSA is available on the U.S. Department of Labor’s website, including
+Wage and Hour Division (WHD) Fact Sheets, Overtime Pay: General Guidance, and Handy Reference
+Guide to the Fair Labor Standards Act. For employers seeking a comprehensive package of compliance
+assistance materials, the WHD’s Payroll Audit Independent Determination (PAID) program’s training for
+employers includes both written materials and short videos. Additionally, if an employer completes the
+training and discovers a minimum wage or overtime violation, there is an opportunity to self-report and
+work efficiently with WHD to correct the mistakes.
+
+For Federal employees covered by OPM-issued FLSA regulations, see the OPM FLSA fact sheet titled
+How to Compute FLSA Overtime Pay.
+

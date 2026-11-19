@@ -40,6 +40,7 @@ def main():
     token = os.environ.get("VERCEL_TOKEN") or sys.exit("VERCEL_TOKEN is not set.")
     shutil.copyfile(ROOT / "api" / "_engine.js", ROOT / "public" / "js" / "engine.js")
     shutil.copyfile(ROOT / "api" / "_ttoc.js", ROOT / "public" / "js" / "ttoc.js")
+    shutil.copyfile(ROOT / "api" / "_deduction.js", ROOT / "public" / "js" / "deduction.js")
     assert (ROOT / "public" / "sample" / "input.json").exists(), "run scripts/make_sample.js first"
     files, total = [], 0
     for rel, path in collect():

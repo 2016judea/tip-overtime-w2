@@ -137,3 +137,62 @@ Sandbox caveats, which are not product gaps: Clover's REST API won't create nati
 so the seeded non-cash tips sit on the sandbox's Check tender. A real card tip arrives on the same
 `/payments` row with the same `tipAmount`. Refunded tips were not seeded (refunds need a card
 processor); the refund path is covered by the unit tests.
+
+---
+
+# Data model, part 2 — the person asking (2026-11-19)
+
+Written from the need before any code, for the re-wrap as an AI connector. The need: a worker asks
+an assistant "how much of my tips and overtime can I deduct, and what goes where", and gets the
+deduction with the math shown, line by line on Schedule 1-A (Form 1040), from the documents they
+already hold. A bookkeeper asks "what goes in W-2 box 12 TP/TT and 14b" with payroll rows pasted in.
+
+## Return (one per question)
+| field | question it answers |
+|---|---|
+| tax_year | which year's rules and form lines (2025–2028 are covered by §224(h), §225(g)) |
+| filing_status | cap ($12,500 vs $25,000 on overtime), phase-out start ($150,000 vs $300,000), and MFS = no deduction (§224(f), §225(e)) |
+| magi | Schedule 1-A line 3: Form 1040 line 11b + excluded Puerto Rico income + Form 2555 lines 45/50 + Form 4563 line 15 |
+| valid_ssn (self, spouse) | no SSN valid for employment = no deduction (§224(e), §225(d)) |
+
+## Job (one per employer / W-2)
+| field | question it answers |
+|---|---|
+| employer label | which row of Schedule 1-A line 4 / line 16 (the worker's own label; never stored) |
+| box 12 TP | qualified tips on the W-2 (2026 Schedule 1-A line 4 col iii) |
+| box 14b codes | whether the tips came in a listed occupation; "000" = some did not |
+| nonqualifying part of TP | the share of TP earned in an unlisted occupation (only the worker knows) |
+| Form 4137 line 1 col (c) | unreported tips; the larger of TP and this goes on line 4 col v |
+| box 12 TT | qualified overtime on the W-2 (line 16 col iii) |
+| pay-stub figures (before the W-2 arrives): tips to date, hours over 40 per week × regular rate, or overtime pay and its multiplier | an estimate of TP/TT, labelled as one (Notice 2025-69 methods A–D) |
+| FLSA exempt | exempt = no qualified overtime, whatever was paid |
+| employer is an SSTB | §224(d)(2)(B); IRS treats listed occupations as non-SSTB until SSTB final regs (Notice 2025-69, TD 10044 §1.224-1(g) reserved) |
+
+## Self-employed tip business (one per Schedule C/E/F)
+| field | question it answers |
+|---|---|
+| 1099 tip amount | line 6 col xii |
+| net profit, other allocable deductions | the §224(c) limit: tips count only up to profit (line 6 col v) |
+
+## Output
+| field | question it answers |
+|---|---|
+| every Schedule 1-A line, Parts II and III | what to write where |
+| tips deduction, overtime deduction | the answer |
+| Form 1040 line that takes it | where the total lands |
+| federal income tax saved (estimate) | what it is worth: standard deduction, ordinary brackets (Rev. Proc. 2025-32), before credits |
+| flags + citations | why each number is what it is, and what is not known |
+
+## Payroll rows (owner / bookkeeper)
+One row per employee per FLSA workweek: employee label, week start date, hours worked, regular
+hourly rate, tip credit, other pay in the regular rate (non-discretionary bonus, service charges
+paid out), tips reported, role or TTOC. Out: TP, TT and 14b per employee, with each overtime week's
+regular rate. This is the existing engine's input with the register replaced by a table.
+
+## Reality check (2026-11-19)
+Every field is printed on a document the person already holds: W-2 boxes 12 and 14b (new for
+2026, General Instructions for Forms W-2 and W-3), Form 4137, 1099-NEC/MISC/K, Schedule C, Form
+1040 line 11b, pay stubs. Nothing has to be fetched about the person, so nothing is stored. Two
+fields only the person can fill: the nonqualifying share of TP when 14b says "000", and FLSA status
+when no TT is printed. Both are asked, with the rule shown. The SSTB field is settled for now by the
+transition rule. **Verdict: fillable in full. Build it.**

@@ -1,0 +1,23 @@
+.answer{padding:22px 0 6px}
+.answer h1{font-size:clamp(28px,6.4vw,44px);line-height:1.08;letter-spacing:-.02em;margin:0 0 10px;font-weight:750}
+.answer .lede{font-size:clamp(16px,2.4vw,19px);margin:0 0 12px;max-width:40em}
+.card h3 .rm{margin-left:auto}
+.card h3 .muted{font-weight:400}
+.code-name{margin:-4px 0 6px}
+table.lines td:first-child{white-space:nowrap;color:var(--muted);width:3.2em}
+table.lines td:nth-child(2){font-size:13px}
+table.lines td:last-child{white-space:nowrap}
+table.owner td:nth-child(2),table.owner td:nth-child(3){text-align:right;white-space:nowrap}
+.flags{padding-left:28px}
+.flags li{margin:4px 0}
+.flags a{color:var(--warn);font-size:12px}
+@media print{
+  body{background:#fff;font-size:12px}
+  .no-print,form,header.top,footer,details summary{display:none!important}
+  .answer{padding:0}
+  .answer h1{font-size:22px}
+  .card{border:0;padding:0;margin:8px 0}
+  .totals div{border:1px solid #999}
+  a{color:#000;text-decoration:none}
+  .prose a::after{content:" " attr(href);font-size:10px;color:#555}
+}
