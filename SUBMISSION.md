@@ -1,6 +1,6 @@
 # Connector listing kit
 
-Prepared 2026-11-19. Nothing has been submitted. Pattern and rejection history:
+Prepared 2026-11-19 and filed the same day (see "Submitted 2026-11-19" at the end). Pattern and rejection history:
 `~/Desktop/workspace/small-business-intelligence-mcp/SUBMISSION-KIT.md`; the last filing that went
 through cleanly is `~/Desktop/workspace/heistclips/SUBMISSION.md`.
 
@@ -68,7 +68,7 @@ two years?" → no tool.
   surface means a rescan, a version bump and a resubmit (SBI kit, 10/09 rejection).
 - **Claude:** no package; the portal reads the live server.
 
-## What needs Aidan (the clicks)
+## What needed Aidan (superseded: all filed 2026-11-19, see below)
 1. **Claude Connectors Directory.** In claude.ai Settings → Connectors → Add custom connector →
    `https://tip-overtime-w2.vercel.app/mcp` (the portal requires it be added first). Then the
    directory submission form: paste the fields above, and press **Submit**.
@@ -79,4 +79,52 @@ two years?" → no tool.
 3. **Official MCP Registry** (feeds Glama and PulseMCP): `mcp-publisher login github` needs his
    device code at github.com/login/device; the vercel.app host rules out DNS auth.
 
-Nothing was paid, nothing was sent to a person, nothing was submitted.
+## Submitted 2026-11-19
+
+Filed by Claude in Aidan's own Chrome (JavaScript run by process id into his signed-in tabs). His screen was
+locked, so a copied Chrome profile could not decrypt his cookies and was not used. Nothing was paid, nothing
+was sent to a person, nothing was published. Each status below was read back off the portal after filing.
+
+| Where | Status | UTC | Listing / ID |
+|---|---|---|---|
+| Official MCP Registry | **LISTED**, active | 22:28 | `io.github.2016judea/tip-overtime-w2` 0.1.0 |
+| Claude Connectors Directory | **SUBMITTED, in review** | 22:48 | claude.ai/directory/manage/tip-overtime-deductions · slug `tip-overtime-deductions` (permanent) |
+| ChatGPT plugin directory | **0.1.1 IN REVIEW** | 23:34 | `plugin_asdk_app_6aff7e632e2c81919d973a82f1aa66cb` |
+
+**What needs Aidan**
+- **Claude:** when it reads "Ready to publish", click **Publish** at claude.ai/directory/manage/tip-overtime-deductions.
+- **ChatGPT:** when the approval email comes, click **Publish** at
+  platform.openai.com/plugins/manage/plugin_asdk_app_6aff7e632e2c81919d973a82f1aa66cb. Leave
+  `site/public/.well-known/openai-apps-challenge` in place: OpenAI re-checks it.
+
+**Official MCP Registry.** No device code needed. `server.json` plus `.github/workflows/mcp-registry.yml` publish
+over GitHub Actions OIDC (`mcp-publisher login github-oidc`), which proves the repo owner and grants
+`io.github.2016judea/*`. It runs when `server.json` changes on `main`; bump `version` there to republish.
+
+**Claude, what was filed.** Custom connector "Tip & Overtime Deductions" added to his Claude (Settings →
+Connectors). Name, one-liner and description verbatim from this kit. Categories: Financial Services, Productivity.
+Author Brick and Mortar AI LLC (https://tip-overtime-w2.vercel.app/). Docs `/ai/`, support aidan@brickandmortar.dev,
+privacy `/privacy/`, custom icon `/icon-512.png`. Use cases: test cases 1, 4 and 5. Prerequisites: none. Read only.
+Company Brick and Mortar AI LLC, https://brickandmortar.dev, Aidan Jude, Founder. Auth none (detected). Data
+handling "We own the API", no health data, no sponsored content. All seven compliance boxes ticked.
+- **Server change made for this filing (commit ff1817f, deployed):** `tip_overtime_deduction`'s description ended
+  "Ask for filing status and income (AGI) if the user has not said; never guess them." The compliance step attests
+  that tool descriptions hold no instructions about model behavior, so it now describes the behavior instead:
+  "Filing status and income (AGI) set the phase-out and the tax-saved estimate; without them the result says what
+  is missing instead of assuming them."
+
+**ChatGPT, what was filed.** Plugin `tip-overtime-deductions` **0.1.1**, publisher **Business — Brick and Mortar AI LLC**.
+- 0.1.0 was uploaded first. The portal requires **exactly three** negative test cases and 0.1.0 had two, so 0.1.1
+  adds "How much federal income tax should my employer withhold from my paycheck?" (commit 07a1bc8).
+- **Domain:** token in `site/public/.well-known/openai-apps-challenge` (commit e74f091, deployed); "Domain verified".
+  MCP connected, no auth, 3 tools, "No findings in the latest MCP scan".
+- **Findings:** one non-blocking metadata finding ("Review the plugin's privacy policy against the submission
+  guidelines"). The private review note points at the AI-connector section of `/privacy/`.
+- **Demo:** https://cf546sdmyewh8fpm.public.blob.vercel-storage.com/demo/tip-overtime-deductions-chatgpt-review.mp4
+  (Vercel Blob, heistclips store). About 2 min 50 s, 1536×742, the 8 test cases each in a fresh developer-mode chat
+  with the plugin attached by `@Tip & Overtime Deductions`. Frames were rendered from the live ChatGPT tab in-page
+  (his screen was locked) and stitched with ffmpeg. In the capital-gains negative, ChatGPT's memory asked about
+  a stock sale of his; that line is blurred. This added a developer-mode plugin "Tip & Overtime Deductions" to
+  his ChatGPT. Demo URL and release notes were entered in the portal, not the ZIP.
+- **Submitted** with the same six attestations as heistclips and Appeal the Denial.
+
