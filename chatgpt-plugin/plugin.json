@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tip-overtime-deductions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Works out the federal no-tax-on-tips and no-tax-on-overtime deductions (Schedule 1-A, Form 1040, tax years 2025-2028) and the new 2026 W-2 boxes, in code, with every Schedule 1-A line shown and a citation to the statute, regulation, IRS form or notice behind each rule. A worker gives what is on their W-2 (box 12 codes TP and TT, box 14b) or their pay stubs, filing status and income, and gets both deductions, the Form 1040 line they land on, the estimated federal tax saved, what is still unknown, and a link to a filled-in worksheet to print for a preparer. An owner or bookkeeper pastes payroll rows and gets each employee's box 12 TP, TT and box 14b with the overtime math for every week. A third tool says whether a job is on the IRS list of tipped occupations and what the deduction is worth at that job's median pay (BLS). All three tools are read-only, store nothing they are sent, and file nothing. No account is needed.",
   "author": {
     "name": "Brick and Mortar AI LLC",
@@ -82,6 +82,11 @@
               "description": "Unrelated tax question.",
               "prompt": "What's the capital gains rate on stock I held two years?",
               "expected_behavior": "No tool is called."
+            },
+            {
+              "description": "Paycheck withholding, which the tools do not compute.",
+              "prompt": "How much federal income tax should my employer withhold from my paycheck?",
+              "expected_behavior": "No tool is called; the assistant answers from general knowledge or points to the IRS withholding estimator, since the tools only work out the tips and overtime deductions and W-2 boxes."
             }
           ]
         }

@@ -30,11 +30,13 @@ TESTS = [
      "tipped_occupation_code", "Code 101 Bartenders with the IRS description, BLS median pay $34,340 and $120 saved per $1,000 of tips at that pay."),
 ]
 NEG = [("Asks to file the return.", "File my tax return for me.", "No tool files anything; the assistant explains the connector only calculates."),
-       ("Unrelated tax question.", "What's the capital gains rate on stock I held two years?", "No tool is called.")]
+       ("Unrelated tax question.", "What's the capital gains rate on stock I held two years?", "No tool is called."),
+       ("Paycheck withholding, which the tools do not compute.", "How much federal income tax should my employer withhold from my paycheck?",
+        "No tool is called; the assistant answers from general knowledge or points to the IRS withholding estimator, since the tools only work out the tips and overtime deductions and W-2 boxes.")]
 
 plugin = {
     "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-    "name": "tip-overtime-deductions", "version": "0.1.0", "description": DESC,
+    "name": "tip-overtime-deductions", "version": "0.1.1", "description": DESC,
     "author": {"name": "Brick and Mortar AI LLC", "url": SITE + "/"}, "homepage": SITE + "/ai/",
     "repository": "https://github.com/2016judea/tip-overtime-w2", "license": "MIT",
     "keywords": ["no tax on tips", "no tax on overtime", "Schedule 1-A", "W-2"],
